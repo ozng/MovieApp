@@ -2,7 +2,37 @@
   padding: 0 10rem;
 }
 
+.slider-card-container {
+  position: relative;
+  cursor: pointer;
+}
+
 .slider-image {
   height: 30rem;
+  width: 100%;
   object-fit: cover;
+}
+
+.slider-card-title {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f2f2f2;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 0 2px 2px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.slider-card-overview {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 65%;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f2f2f2;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border-radius: 0 2px 2px 0;
 }

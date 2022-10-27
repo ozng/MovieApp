@@ -1,18 +1,22 @@
 import "./home.css";
 import Header from "../../components/Header/Header";
 import Slider from "../../components/Slider/Slider";
-
-const dummyCoverImages = [
-  "https://www.arthipo.com/image/cache/catalog/poster/movie/1-758/pfilm209-movie-film-poster-batman-begins_5b951e0b-1000x1000.jpg",
-  "https://wallpaperaccess.com/full/1264756.jpg",
-  "https://i.pinimg.com/originals/cd/78/0a/cd780a7de444b557dce522ce14eb3388.jpg",
-];
+import { useDispatch, useSelector } from "react-redux";
+import { getPopular } from "../../store/actions/movie";
+import { useEffect } from "react";
 
 function Home() {
+  const dispatch = useDispatch();
+  const popularMovies = useSelector((state) => state.movie.popular);
+
+  useEffect(() => {
+    dispatch(getPopular());
+  }, [dispatch]);
+
   return (
     <>
       <Header />
-      <Slider images={dummyCoverImages} />
+      <Slider popularMovies={popularMovies} />
     </>
   );
 }
