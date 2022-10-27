@@ -19,7 +19,7 @@
 }
 
 .header-logo:hover {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .header-user-section {
