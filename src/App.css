@@ -5,8 +5,12 @@ body {
   padding: 0;
   font-size: 62.5%;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-text-black: #333;
+
+  --color-primary: #e7a61a;
 }
