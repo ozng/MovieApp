@@ -1,0 +1,8 @@
+.slider-container {
+  padding: 0 10rem;
+}
+
+.slider-image {
+  height: 30rem;
+  object-fit: cover;
+}
