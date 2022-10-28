@@ -37,7 +37,7 @@ const movieReducer = (state = initialState, action) => {
       const upcomingMovies = action.payload;
       return {
         ...state,
-        nowPlaying: upcomingMovies,
+        upcoming: upcomingMovies,
       };
     default:
       return {

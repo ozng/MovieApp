@@ -1,0 +1,9 @@
+.horizontal-card-image {
+  height: 15rem;
+}
+
+.horizontal-card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.2rem 0;
+}

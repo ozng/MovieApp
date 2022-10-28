@@ -1,0 +1,20 @@
+.horizontal-list-card-container {
+  display: flex;
+  gap: 2rem;
+  overflow: scroll;
+}
+
+.horizontal-list-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.horizontal-list-card-container::-webkit-scrollbar {
+  width: 0;
+  height: 0.5rem;
+}
+
+.horizontal-list-card-container::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 1.5rem;
+}
