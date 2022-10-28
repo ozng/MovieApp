@@ -2,11 +2,13 @@
   display: flex;
   gap: 2rem;
   overflow: scroll;
+  padding-bottom: 1rem;
 }
 
 .horizontal-list-title {
   font-weight: 600;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .horizontal-list-card-container::-webkit-scrollbar {

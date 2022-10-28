@@ -18,8 +18,6 @@ function Home() {
   const topRatedMovies = useSelector((state) => state.movie.topRated);
   const nowPlayingMovies = useSelector((state) => state.movie.nowPlaying);
 
-  console.log(upcomingMovies);
-
   useEffect(() => {
     dispatch(getPopular());
     dispatch(getNowPlaying());
@@ -34,16 +32,13 @@ function Home() {
         <Slider popularMovies={popularMovies} />
       </div>
       <div className="home-slider-list-container home-margin">
-        <HorizontalList movieList={upcomingMovies} title="Upcoming Movies" />
+        <HorizontalList movieList={upcomingMovies} title="Upcoming" />
       </div>
       <div className="home-slider-list-container home-margin home-m-t">
-        <HorizontalList movieList={topRatedMovies} title="Top Rated Movies" />
+        <HorizontalList movieList={topRatedMovies} title="Top Rated" />
       </div>
       <div className="home-slider-list-container home-margin home-m-t">
-        <HorizontalList
-          movieList={nowPlayingMovies}
-          title="Now Playing Movies"
-        />
+        <HorizontalList movieList={nowPlayingMovies} title="Now Playing" />
       </div>
     </>
   );

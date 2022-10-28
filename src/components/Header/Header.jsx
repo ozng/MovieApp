@@ -3,7 +3,7 @@ import "./header.css";
 function Header() {
   return (
     <div className="header-container">
-      <h1 className="header-logo">Movie Tracker</h1>
+      <h1 className="header-logo">MYMDB</h1>
       <div className="header-user-section">
         <img
           className="header-user-avatar"
