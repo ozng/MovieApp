@@ -16,7 +16,9 @@ function Home() {
   return (
     <>
       <Header />
-      <Slider popularMovies={popularMovies} />
+      <div className="home-slider-container">
+        <Slider popularMovies={popularMovies} />
+      </div>
     </>
   );
 }

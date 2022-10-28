@@ -4,7 +4,6 @@
 
 .slider-card-container {
   position: relative;
-  cursor: pointer;
 }
 
 .slider-image {
@@ -23,6 +22,8 @@
   border-radius: 0 2px 2px 0;
   font-size: 1.2rem;
   font-weight: 600;
+
+  cursor: pointer;
 }
 
 .slider-card-overview {
