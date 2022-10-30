@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import "./header.css";
 
 function Header() {
+  const navigation = useNavigate();
+
   return (
     <div className="header-container">
-      <h1 className="header-logo">MYMDB</h1>
+      <h1 onClick={() => navigation("/")} className="header-logo">
+        MYMDB
+      </h1>
       <div className="header-user-section">
         <img
           className="header-user-avatar"

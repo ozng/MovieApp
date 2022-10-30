@@ -5,3 +5,9 @@
 .category-detail-m-t {
   margin-top: 2rem;
 }
+
+.category-detail-title {
+  text-align: center;
+  font-weight: 800;
+  color: var(--color-accent);
+}

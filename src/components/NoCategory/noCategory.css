@@ -1,0 +1,18 @@
+.no-category-title {
+  margin: 0;
+  font-size: 10rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.no-category-text-center {
+  text-align: center;
+}
+
+.no-category-1 {
+  font-size: 1.5rem;
+}
+
+.no-category-2 {
+  font-size: 0.8rem;
+}
