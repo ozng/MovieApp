@@ -6,6 +6,7 @@ import {
 } from "../actions/movie";
 
 const initialState = {
+  isLoading: true,
   popular: [],
   upcoming: [],
   topRated: [],
@@ -20,24 +21,28 @@ const movieReducer = (state = initialState, action) => {
       return {
         ...state,
         popular: popularMovies,
+        isLoading: false,
       };
     case GET_NOW_PLAYING:
       const nowPlayingMovies = action.payload;
       return {
         ...state,
         nowPlaying: nowPlayingMovies,
+        isLoading: false,
       };
     case GET_TOP_RATED:
       const topRatedMovies = action.payload;
       return {
         ...state,
         topRated: topRatedMovies,
+        isLoading: false,
       };
     case GET_UPCOMING:
       const upcomingMovies = action.payload;
       return {
         ...state,
         upcoming: upcomingMovies,
+        isLoading: false,
       };
     default:
       return {

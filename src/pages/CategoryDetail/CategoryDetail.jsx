@@ -16,7 +16,7 @@ function CategoryDetail() {
   );
 
   const [selectedTitle, setSelectedTitle] = useState("MYMDB");
-  const [isCategorySelected, setIsCategorySelected] = useState(false);
+  const [isCategorySelected, setIsCategorySelected] = useState(true);
 
   useEffect(() => {
     if (selectedCategory === "upcoming") {
@@ -28,6 +28,8 @@ function CategoryDetail() {
     } else if (selectedCategory === "nowPlaying") {
       setSelectedTitle("Now Playing");
       setIsCategorySelected(true);
+    } else {
+      setIsCategorySelected(false);
     }
   }, [selectedCategory]);
 
@@ -40,9 +42,10 @@ function CategoryDetail() {
             <h1 className="category-detail-title">{selectedTitle} Movies</h1>
           </div>
           <div className="category-detail-margin">
-            {selectedCategoryData.map((movie) => (
-              <VerticalCard movie={movie} />
-            ))}
+            {selectedCategoryData &&
+              selectedCategoryData.map((movie) => (
+                <VerticalCard movie={movie} />
+              ))}
           </div>
         </>
       ) : (

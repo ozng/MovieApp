@@ -9,3 +9,10 @@
 .home-m-t {
   margin-top: 2rem;
 }
+
+.home-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
