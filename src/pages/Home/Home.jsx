@@ -10,6 +10,7 @@ import {
 } from "../../store/actions/movie";
 import { useEffect } from "react";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const dispatch = useDispatch();
@@ -18,12 +19,18 @@ function Home() {
   const topRatedMovies = useSelector((state) => state.movie.topRated);
   const nowPlayingMovies = useSelector((state) => state.movie.nowPlaying);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     dispatch(getPopular());
     dispatch(getNowPlaying());
     dispatch(getTopRated());
     dispatch(getUpcoming());
   }, [dispatch]);
+
+  const navigateToCategoryListHandler = (categoryName) => {
+    navigate(`/category-detail/${categoryName}`);
+  };
 
   return (
     <>
@@ -32,13 +39,25 @@ function Home() {
         <Slider popularMovies={popularMovies} />
       </div>
       <div className="home-slider-list-container home-margin">
-        <HorizontalList movieList={upcomingMovies} title="Upcoming" />
+        <HorizontalList
+          movieList={upcomingMovies}
+          title="Upcoming"
+          onClickTitle={() => navigateToCategoryListHandler("upcoming")}
+        />
       </div>
       <div className="home-slider-list-container home-margin home-m-t">
-        <HorizontalList movieList={topRatedMovies} title="Top Rated" />
+        <HorizontalList
+          movieList={topRatedMovies}
+          title="Top Rated"
+          onClickTitle={() => navigateToCategoryListHandler("topRated")}
+        />
       </div>
       <div className="home-slider-list-container home-margin home-m-t">
-        <HorizontalList movieList={nowPlayingMovies} title="Now Playing" />
+        <HorizontalList
+          movieList={nowPlayingMovies}
+          title="Now Playing"
+          onClickTitle={() => navigateToCategoryListHandler("nowPlaying")}
+        />
       </div>
     </>
   );
