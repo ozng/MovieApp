@@ -14,7 +14,7 @@ function HorizontalCard({ movie }) {
         />
         <h3 className="horizontal-card-title">{movie.title}</h3>
       </div>
-      <div>
+      <div className="horizontal-card-rate-container">
         {movie.vote_average > 0 ? (
           <>
             <Rate
