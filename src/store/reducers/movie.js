@@ -1,4 +1,5 @@
 import {
+  GET_DETAIL,
   GET_NOW_PLAYING,
   GET_POPULAR,
   GET_TOP_RATED,
@@ -43,6 +44,12 @@ const movieReducer = (state = initialState, action) => {
         ...state,
         upcoming: upcomingMovies,
         isLoading: false,
+      };
+    case GET_DETAIL:
+      const movieDetail = action.payload;
+      return {
+        ...state,
+        selected: movieDetail,
       };
     default:
       return {

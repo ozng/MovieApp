@@ -1,11 +1,22 @@
 import "./horizontalCard.css";
 import { Rate } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 
 function HorizontalCard({ movie }) {
+  const navigate = useNavigate();
+
+  const navigateToDetailHandler = () => {
+    navigate(`/movie/${movie.id}`);
+  };
+
   return (
-    <div className="horizontal-card-container" key={movie.id}>
+    <div
+      onClick={navigateToDetailHandler}
+      className="horizontal-card-container"
+      key={movie.id}
+    >
       <div>
         <img
           src={`${imageURL}/w154/${movie.poster_path}`}
