@@ -38,8 +38,8 @@ export const getNowPlaying = () => {
   };
 };
 
-export const getDetail = (data) => {
+export const getDetail = (movieDetail) => {
   return async (dispatch) => {
-    dispatch({ type: GET_DETAIL, payload: data });
+    dispatch({ type: GET_DETAIL, payload: movieDetail });
   };
 };

@@ -7,6 +7,7 @@ import useFetch from "../../hooks/useFetch";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 import { useEffect } from "react";
+import DetailHeader from "../../components/DetailHeader/DetailHeader";
 
 function Detail() {
   const dispatch = useDispatch();
@@ -31,8 +32,8 @@ function Detail() {
           <Spin indicator={<LoadingOutlined />} />
         </div>
       ) : (
-        <div>
-          <h1>{movieDetail?.title}</h1>
+        <div className="detail-container">
+          <DetailHeader detail={movieDetail} />
         </div>
       )}
     </div>

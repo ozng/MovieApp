@@ -2,5 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90%;
+  height: 100vh;
+}
+
+.detail-container {
+  padding: 0 5rem;
 }
