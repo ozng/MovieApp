@@ -23,7 +23,13 @@
   font-size: 1.2rem;
   font-weight: 600;
 
+  transition: all 0.2s ease-out;
   cursor: pointer;
+}
+
+.slider-card-title:hover {
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
 }
 
 .slider-card-overview {

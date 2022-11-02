@@ -1,9 +1,12 @@
 import "./slider.css";
 import { Carousel } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 
 function Slider({ popularMovies }) {
+  const navigate = useNavigate();
+
   const maxOverviewLength = 250;
 
   return (
@@ -16,7 +19,12 @@ function Slider({ popularMovies }) {
               alt="movie cover"
               src={`${imageURL}/w1280/${movie.backdrop_path}`}
             />
-            <h2 className="slider-card-title">{movie.title}</h2>
+            <h2
+              className="slider-card-title"
+              onClick={() => navigate(`/movie/${movie.id}`)}
+            >
+              {movie.title}
+            </h2>
             <p className="slider-card-overview">
               {movie.overview.length > maxOverviewLength
                 ? movie.overview.substring(0, maxOverviewLength) + "..."

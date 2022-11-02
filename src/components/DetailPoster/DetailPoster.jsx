@@ -5,7 +5,6 @@ import moment from "moment";
 const imageURL = process.env.REACT_APP_IMG_URL;
 
 function DetailPoster({ detail }) {
-  console.log(detail);
   return (
     <div className="detail-poster-container">
       <div className="detail-poster-image-container">

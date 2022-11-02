@@ -1,10 +1,13 @@
 import "./verticalCard.css";
 import { Image, Rate } from "antd";
 import moment from "moment/moment";
+import { useNavigate } from "react-router-dom";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 
 function VerticalCard({ movie }) {
+  const navigate = useNavigate();
+
   return (
     <div className="vertical-card-container">
       <div className="vertical-card-image-container">
@@ -14,7 +17,10 @@ function VerticalCard({ movie }) {
           className="vertical-card-image"
         />
       </div>
-      <div className="vertical-card-details-container">
+      <div
+        className="vertical-card-details-container"
+        onClick={() => navigate(`/movie/${movie.id}`)}
+      >
         <div className="vertical-card-title-overview-container">
           <h2 className="vertical-card-title">{movie.title}</h2>
           <p className="vertical-card-overview">{movie.overview}</p>
