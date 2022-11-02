@@ -5,6 +5,7 @@ export const GET_UPCOMING = "GET_UPCOMING";
 export const GET_TOP_RATED = "GET_TOP_RATED";
 export const GET_NOW_PLAYING = "GET_NOW_PLAYING";
 export const GET_DETAIL = "GET_DETAIL";
+export const FETCH_IMAGES = "FETCH_IMAGES";
 
 export const getPopular = () => {
   return async (dispatch) => {
@@ -41,5 +42,11 @@ export const getNowPlaying = () => {
 export const getDetail = (movieDetail) => {
   return async (dispatch) => {
     dispatch({ type: GET_DETAIL, payload: movieDetail });
+  };
+};
+
+export const fetchImages = (images) => {
+  return async (dispatch) => {
+    dispatch({ type: FETCH_IMAGES, payload: images });
   };
 };

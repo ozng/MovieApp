@@ -22,7 +22,6 @@ const useFetch = (endpoint) => {
         },
       });
       const resData = await response.data;
-      console.log(resData);
       setData(resData);
     } catch (err) {
       setError(err);

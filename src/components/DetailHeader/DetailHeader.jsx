@@ -19,16 +19,16 @@ function DetailHeader({ detail }) {
       </div>
       <div className="detail-header-vote-container">
         <Rate
-          tooltips={detail.vote_average / 2}
+          tooltips={detail?.vote_average / 2}
           className="detail-header-rate"
           allowHalf
           disabled
-          defaultValue={detail.vote_average / 2}
+          defaultValue={detail?.vote_average / 2}
         />
         <span className="detail-header-vote">
-          {(detail.vote_average / 2).toFixed(1)}
+          {(detail?.vote_average / 2).toFixed(1)}
         </span>
-        <span className="detail-header-vote-count">{`(${detail.vote_count}) vote`}</span>
+        <span className="detail-header-vote-count">{`(${detail?.vote_count}) vote`}</span>
       </div>
     </div>
   );

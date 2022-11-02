@@ -12,7 +12,7 @@
   font-size: 2.5rem;
   font-weight: 600;
   margin: 0;
-  color: var(--color-text-black);
+  color: var(--color-accent);
 }
 
 .detail-header-title-detail-container {
