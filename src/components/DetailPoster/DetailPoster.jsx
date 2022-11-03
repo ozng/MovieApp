@@ -5,6 +5,7 @@ import moment from "moment";
 const imageURL = process.env.REACT_APP_IMG_URL;
 
 function DetailPoster({ detail }) {
+  console.log(detail);
   return (
     <div className="detail-poster-container">
       <div className="detail-poster-image-container">
@@ -18,11 +19,12 @@ function DetailPoster({ detail }) {
           <h2 className="detail-poster-tagline">`{detail?.tagline}`</h2>
 
           <div className="detail-poster-genres-container">
-            {detail?.genres.map((genre) => (
-              <p key={genre.id} className="detail-poster-genre">
-                {genre.name}
-              </p>
-            ))}
+            {detail?.genres &&
+              detail?.genres.map((genre) => (
+                <p key={genre.id} className="detail-poster-genre">
+                  {genre.name}
+                </p>
+              ))}
           </div>
 
           <p className="detail-poster-overview">{detail?.overview}</p>

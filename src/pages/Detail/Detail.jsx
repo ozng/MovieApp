@@ -9,6 +9,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 import { useEffect } from "react";
 import DetailHeader from "../../components/DetailHeader/DetailHeader";
 import DetailPoster from "../../components/DetailPoster/DetailPoster";
+import DetailBudget from "../../components/DetailBudget/DetailBudget";
 
 function Detail() {
   const dispatch = useDispatch();
@@ -36,6 +37,7 @@ function Detail() {
         <div className="detail-container">
           <DetailHeader detail={movieDetail} />
           <DetailPoster detail={movieDetail} />
+          <DetailBudget detail={movieDetail} />
         </div>
       )}
     </div>

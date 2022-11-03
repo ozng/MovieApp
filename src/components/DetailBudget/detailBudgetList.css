@@ -1,0 +1,25 @@
+.detail-budget-list-container {
+  display: flex;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+  align-items: center;
+}
+
+.detail-budget-list-container:not(:first-child) {
+  padding-top: 1rem;
+}
+
+.detail-budget-list-avatar {
+  margin-right: 1rem;
+}
+
+.detail-budget-list-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.detail-budget-list-label {
+  font-size: 1rem;
+  font-weight: 400;
+}
