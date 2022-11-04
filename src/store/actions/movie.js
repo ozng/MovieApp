@@ -6,6 +6,7 @@ export const GET_TOP_RATED = "GET_TOP_RATED";
 export const GET_NOW_PLAYING = "GET_NOW_PLAYING";
 export const GET_DETAIL = "GET_DETAIL";
 export const FETCH_IMAGES = "FETCH_IMAGES";
+export const FETCH_VIDEOS = "FETCH_VIDEOS";
 
 export const getPopular = () => {
   return async (dispatch) => {
@@ -48,5 +49,11 @@ export const getDetail = (movieDetail) => {
 export const fetchImages = (images) => {
   return async (dispatch) => {
     dispatch({ type: FETCH_IMAGES, payload: images });
+  };
+};
+
+export const fetchVideos = (videos) => {
+  return async (dispatch) => {
+    dispatch({ type: FETCH_VIDEOS, payload: videos });
   };
 };

@@ -1,0 +1,30 @@
+.detail-media-card-container {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 10rem;
+  padding: 1rem;
+  border-radius: 5px;
+
+  transition: all 0.2s ease-out;
+}
+
+.detail-media-card-container:hover {
+  background-color: var(--color-text-black);
+  color: var(--color-white-1);
+  cursor: pointer;
+}
+
+.detail-media-card-container:active {
+  transform: translateY(2px);
+}
+
+.detail-media-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.detail-media-card-icon-container {
+  font-size: 1.5rem;
+  color: inherit;
+}

@@ -1,0 +1,5 @@
+.detail-media-container {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}

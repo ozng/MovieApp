@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import DetailHeader from "../../components/DetailHeader/DetailHeader";
 import DetailPoster from "../../components/DetailPoster/DetailPoster";
 import DetailBudget from "../../components/DetailBudget/DetailBudget";
+import DetailMedia from "../../components/DetailMedia/DetailMedia";
 
 function Detail() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ function Detail() {
           <DetailHeader detail={movieDetail} />
           <DetailPoster detail={movieDetail} />
           <DetailBudget detail={movieDetail} />
+          <DetailMedia movieID={movieID} />
         </div>
       )}
     </div>

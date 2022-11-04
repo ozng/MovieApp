@@ -1,5 +1,6 @@
 import {
   FETCH_IMAGES,
+  FETCH_VIDEOS,
   GET_DETAIL,
   GET_NOW_PLAYING,
   GET_POPULAR,
@@ -14,6 +15,8 @@ const initialState = {
   topRated: [],
   nowPlaying: [],
   selected: {},
+  selectedMovieImages: {},
+  selectedMovieVideos: {},
 };
 
 const movieReducer = (state = initialState, action) => {
@@ -56,10 +59,13 @@ const movieReducer = (state = initialState, action) => {
       const fetchedImages = action.payload;
       return {
         ...state,
-        selected: {
-          ...state.selected,
-          images: fetchedImages,
-        },
+        selectedMovieImages: fetchedImages,
+      };
+    case FETCH_VIDEOS:
+      const fetchedVideos = action.payload;
+      return {
+        ...state,
+        selectedMovieVideos: fetchedVideos,
       };
     default:
       return {

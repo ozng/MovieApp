@@ -1,0 +1,26 @@
+.detail-image-modal {
+  max-width: 90vw !important;
+}
+
+.detail-image-modal-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+
+  color: var(--color-accent);
+}
+
+.detail-image-modal-image {
+  width: 20rem;
+}
+
+.detail-image-modal-image-container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
