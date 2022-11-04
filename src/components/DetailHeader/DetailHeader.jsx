@@ -1,8 +1,19 @@
 import "./detailHeader.css";
 import moment from "moment";
 import { Rate } from "antd";
+import { useEffect, useState } from "react";
 
 function DetailHeader({ detail }) {
+  const [rate, setRate] = useState(0);
+
+  const roundHalf = (num) => {
+    return Math.round(num * 2) / 2;
+  };
+
+  useEffect(() => {
+    setRate(roundHalf(+(detail?.vote_average / 2).toFixed(2)));
+  }, [detail]);
+
   return (
     <div className="detail-header-container">
       <div className="detail-header-title-container">
@@ -19,16 +30,14 @@ function DetailHeader({ detail }) {
       </div>
       <div className="detail-header-vote-container">
         <Rate
-          tooltips={detail?.vote_average / 2}
           className="detail-header-rate"
           allowHalf
           disabled
-          defaultValue={detail?.vote_average / 2}
+          defaultValue={rate}
+          value={rate}
         />
-        <span className="detail-header-vote">
-          {(detail?.vote_average / 2).toFixed(1)}
-        </span>
-        <span className="detail-header-vote-count">{`(${detail?.vote_count}) vote`}</span>
+        <span className="detail-header-vote">{rate}</span>
+        <span className="detail-header-vote-count">{`(${rate}) vote`}</span>
       </div>
     </div>
   );

@@ -6,9 +6,9 @@ const imageURL = process.env.REACT_APP_IMG_URL;
 
 function DetailBudgetList({ data }) {
   return (
-    <div>
+    <>
       {data.map((item) => (
-        <div className="detail-budget-list-container">
+        <div key={item.key} className="detail-budget-list-container">
           {item?.logo_path && (
             <Avatar
               shape="square"
@@ -36,7 +36,7 @@ function DetailBudgetList({ data }) {
           </p>
         </div>
       ))}
-    </div>
+    </>
   );
 }
 
