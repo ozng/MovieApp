@@ -28,6 +28,9 @@ function CategoryDetail() {
     } else if (selectedCategory === "nowPlaying") {
       setSelectedTitle("Now Playing");
       setIsCategorySelected(true);
+    } else if (selectedCategory === "searchedMovies") {
+      setSelectedTitle("Searched");
+      setIsCategorySelected(true);
     } else {
       setIsCategorySelected(false);
     }

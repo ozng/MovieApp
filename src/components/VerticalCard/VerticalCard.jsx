@@ -2,6 +2,7 @@ import "./verticalCard.css";
 import { Image, Rate } from "antd";
 import moment from "moment/moment";
 import { useNavigate } from "react-router-dom";
+import { roundHalf } from "../../helpers/Formatter";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 
@@ -30,12 +31,14 @@ function VerticalCard({ movie }) {
             {movie.vote_average > 0 ? (
               <>
                 <Rate
+                  allowHalf
                   className="vertical-card-rate"
                   disabled
-                  defaultValue={movie.vote_average / 2}
+                  defaultValue={roundHalf(movie.vote_average / 2)}
+                  value={roundHalf(movie.vote_average / 2)}
                 />
                 <span className="vertical-card-vote-count">
-                  {(movie.vote_average / 2).toFixed(1)}
+                  {roundHalf(movie.vote_average / 2)}
                   <span className="vertical-card-vote-count-detail">{`(${movie.vote_count})`}</span>
                 </span>
               </>

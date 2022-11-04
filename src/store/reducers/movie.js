@@ -6,6 +6,7 @@ import {
   GET_POPULAR,
   GET_TOP_RATED,
   GET_UPCOMING,
+  FETCH_SEARCH,
 } from "../actions/movie";
 
 const initialState = {
@@ -17,6 +18,7 @@ const initialState = {
   selected: {},
   selectedMovieImages: {},
   selectedMovieVideos: {},
+  searchedMovies: [],
 };
 
 const movieReducer = (state = initialState, action) => {
@@ -66,6 +68,12 @@ const movieReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedMovieVideos: fetchedVideos,
+      };
+    case FETCH_SEARCH:
+      const searchedMovies = action.payload;
+      return {
+        ...state,
+        searchedMovies: searchedMovies,
       };
     default:
       return {

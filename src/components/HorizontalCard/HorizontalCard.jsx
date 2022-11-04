@@ -1,6 +1,7 @@
 import "./horizontalCard.css";
 import { Rate } from "antd";
 import { useNavigate } from "react-router-dom";
+import { roundHalf } from "../../helpers/Formatter";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 
@@ -29,14 +30,15 @@ function HorizontalCard({ movie }) {
         {movie.vote_average > 0 ? (
           <>
             <Rate
-              tooltips={movie.vote_average / 2}
+              tooltips={roundHalf(movie.vote_average / 2)}
               className="horizontal-card-rate"
               allowHalf
               disabled
               defaultValue={movie.vote_average / 2}
+              value={roundHalf(movie.vote_average / 2)}
             />
             <span className="horizontal-card-rate-count">
-              {movie.vote_average / 2}
+              {roundHalf(movie.vote_average / 2)}
             </span>
           </>
         ) : (

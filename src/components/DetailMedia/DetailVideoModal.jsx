@@ -1,8 +1,8 @@
-import { Modal, Collapse } from "antd";
+import { Modal } from "antd";
 import "./detailVideoModal.css";
 import useFetch from "../../hooks/useFetch";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { fetchVideos } from "../../store/actions/movie";
 import { useState } from "react";
 import DetailVideoCollapse from "./VideoCollapse/DetailVideoCollapse";

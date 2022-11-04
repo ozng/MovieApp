@@ -1,14 +1,36 @@
 import { useNavigate } from "react-router-dom";
 import "./header.css";
+import { SearchOutlined } from "@ant-design/icons";
+import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { fetchSearchedMovies } from "../../store/actions/movie";
 
 function Header() {
   const navigation = useNavigate();
+  const inputRef = useRef();
+  const dispatch = useDispatch();
+
+  const onSearch = async () => {
+    dispatch(fetchSearchedMovies(inputRef?.current?.value));
+    navigation("/category-detail/searchedMovies");
+  };
 
   return (
     <div className="header-container">
       <h1 onClick={() => navigation("/")} className="header-logo">
         MYMDB
       </h1>
+
+      <div className="header-search-container">
+        <input
+          placeholder="Search"
+          type="text"
+          className="header-search-input"
+          ref={inputRef}
+        />
+        <SearchOutlined className="header-search-icon" onClick={onSearch} />
+      </div>
+
       <div className="header-user-section">
         <img
           className="header-user-avatar"

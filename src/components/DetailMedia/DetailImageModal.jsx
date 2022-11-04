@@ -20,8 +20,6 @@ function DetailImageModal({ isModalOpen, handleOk, handleCancel, movieID }) {
     dispatch(fetchImages(data));
   }, [dispatch, movieID, data]);
 
-  console.log(selectedImages);
-
   return (
     <>
       <Modal

@@ -1,4 +1,4 @@
-import { fetchMovies } from "./helpers/movie";
+import { fetchMovies, searchMovie } from "./helpers/movie";
 
 export const GET_POPULAR = "GET_POPULAR";
 export const GET_UPCOMING = "GET_UPCOMING";
@@ -7,6 +7,7 @@ export const GET_NOW_PLAYING = "GET_NOW_PLAYING";
 export const GET_DETAIL = "GET_DETAIL";
 export const FETCH_IMAGES = "FETCH_IMAGES";
 export const FETCH_VIDEOS = "FETCH_VIDEOS";
+export const FETCH_SEARCH = "FETCH_SEARCH";
 
 export const getPopular = () => {
   return async (dispatch) => {
@@ -55,5 +56,12 @@ export const fetchImages = (images) => {
 export const fetchVideos = (videos) => {
   return async (dispatch) => {
     dispatch({ type: FETCH_VIDEOS, payload: videos });
+  };
+};
+
+export const fetchSearchedMovies = (query) => {
+  return async (dispatch) => {
+    const searchedMovies = await searchMovie(query);
+    dispatch({ type: FETCH_SEARCH, payload: searchedMovies });
   };
 };

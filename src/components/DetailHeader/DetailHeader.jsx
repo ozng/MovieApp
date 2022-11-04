@@ -2,13 +2,10 @@ import "./detailHeader.css";
 import moment from "moment";
 import { Rate } from "antd";
 import { useEffect, useState } from "react";
+import { roundHalf } from "../../helpers/Formatter";
 
 function DetailHeader({ detail }) {
   const [rate, setRate] = useState(0);
-
-  const roundHalf = (num) => {
-    return Math.round(num * 2) / 2;
-  };
 
   useEffect(() => {
     setRate(roundHalf(+(detail?.vote_average / 2).toFixed(2)));
