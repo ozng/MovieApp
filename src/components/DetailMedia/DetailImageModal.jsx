@@ -20,6 +20,8 @@ function DetailImageModal({ isModalOpen, handleOk, handleCancel, movieID }) {
     dispatch(fetchImages(data));
   }, [dispatch, movieID, data]);
 
+  console.log(selectedImages);
+
   return (
     <>
       <Modal
@@ -37,27 +39,33 @@ function DetailImageModal({ isModalOpen, handleOk, handleCancel, movieID }) {
         ) : (
           <div className="detail-image-modal-container">
             <h2 className="detail-image-modal-title">
-              Backdrops {`(${selectedImages?.backdrops.length})`}
+              Backdrops{" "}
+              {`(${
+                selectedImages?.backdrops && selectedImages?.backdrops.length
+              })`}
             </h2>
             <div className="detail-image-modal-image-container">
-              {selectedImages?.backdrops.map((image) => (
-                <Image
-                  className="detail-image-modal-image"
-                  src={`${imageURL}/w1280/${image?.file_path}`}
-                />
-              ))}
+              {selectedImages?.backdrops &&
+                selectedImages?.backdrops.map((image) => (
+                  <Image
+                    className="detail-image-modal-image"
+                    src={`${imageURL}/w1280/${image?.file_path}`}
+                  />
+                ))}
             </div>
 
             <h2 className="detail-image-modal-title">
-              Posters {`(${selectedImages?.posters.length})`}
+              Posters{" "}
+              {`(${selectedImages?.posters && selectedImages?.posters.length})`}
             </h2>
             <div className="detail-image-modal-image-container">
-              {selectedImages?.posters.map((image) => (
-                <Image
-                  className="detail-image-modal-image"
-                  src={`${imageURL}/w1280/${image?.file_path}`}
-                />
-              ))}
+              {selectedImages?.posters &&
+                selectedImages?.posters.map((image) => (
+                  <Image
+                    className="detail-image-modal-image"
+                    src={`${imageURL}/w1280/${image?.file_path}`}
+                  />
+                ))}
             </div>
           </div>
         )}

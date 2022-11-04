@@ -1,0 +1,16 @@
+.detail-video-modal {
+  max-width: 95vw;
+}
+
+.detail-video-modal-video-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.detail-video-modal-trailer-container {
+  display: flex;
+  flex-direction: column;
+}
