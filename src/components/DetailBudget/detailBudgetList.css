@@ -11,6 +11,21 @@
 
 .detail-budget-list-avatar {
   margin-right: 1rem;
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+}
+
+.detail-budget-no-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+.detail-budget-no-avatar-label {
+  color: whitesmoke;
+  cursor: default;
 }
 
 .detail-budget-list-title {

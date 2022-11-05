@@ -7,7 +7,7 @@ function DetailHeader({ detail }) {
   const [rate, setRate] = useState(0);
 
   useEffect(() => {
-    detail?.vote_average && setRate((detail?.vote_average).toFixed(2));
+    detail?.vote_average && setRate((detail?.vote_average).toFixed(1));
   }, [detail]);
 
   return (

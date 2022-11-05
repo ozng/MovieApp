@@ -1,5 +1,5 @@
 import "./detailBudgetList.css";
-import { Avatar } from "antd";
+import { Image, Avatar } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
@@ -10,20 +10,15 @@ function DetailBudgetList({ data }) {
       {data.map((item) => (
         <div key={item.key} className="detail-budget-list-container">
           {item?.logo_path && (
-            <Avatar
-              shape="square"
-              size={32}
+            <Image
               src={`${imageURL}/w92/${item?.logo_path}`}
               className="detail-budget-list-avatar"
             />
           )}
           {item?.logo_path === null && (
-            <Avatar
-              shape="square"
-              size={32}
-              className="detail-budget-list-avatar"
-              icon={<CloseOutlined />}
-            />
+            <div className="detail-budget-list-avatar detail-budget-no-avatar">
+              <span className="detail-budget-no-avatar-label">No Image</span>
+            </div>
           )}
           <p className="detail-budget-list-title">
             {item?.title}{" "}
