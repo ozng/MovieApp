@@ -31,6 +31,9 @@ function CategoryDetail() {
     } else if (selectedCategory === "searchedMovies") {
       setSelectedTitle("Searched");
       setIsCategorySelected(true);
+    } else if (selectedCategory === "similarMovies") {
+      setSelectedTitle("Similar");
+      setIsCategorySelected(true);
     } else {
       setIsCategorySelected(false);
     }

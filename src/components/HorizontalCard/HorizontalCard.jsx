@@ -37,7 +37,7 @@ function HorizontalCard({ movie }) {
               count={1}
             />
             <span className="horizontal-card-rate-count">
-              {movie.vote_average}
+              {movie.vote_average.toFixed(1)}
             </span>
           </>
         ) : (

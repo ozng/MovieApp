@@ -1,6 +1,5 @@
 import "./detailBudgetList.css";
-import { Image, Avatar } from "antd";
-import { CloseOutlined } from "@ant-design/icons";
+import { Image } from "antd";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 

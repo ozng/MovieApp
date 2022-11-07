@@ -1,6 +1,6 @@
 import "./detailHeader.css";
 import moment from "moment";
-import { Rate } from "antd";
+import { Rate, Popover } from "antd";
 import { useEffect, useState } from "react";
 
 function DetailHeader({ detail }) {
@@ -13,7 +13,13 @@ function DetailHeader({ detail }) {
   return (
     <div className="detail-header-container">
       <div className="detail-header-title-container">
-        <h2 className="detail-header-title">{detail?.title}</h2>
+        <Popover content={detail?.title}>
+          <h2 className="detail-header-title">
+            {detail?.title?.length > 37
+              ? detail?.title.substring(0, 37) + "..."
+              : detail?.title}
+          </h2>
+        </Popover>
         <div className="detail-header-title-detail-container">
           <p className="detail-header-detail">
             {moment(detail?.release_date).format("YYYY")}
