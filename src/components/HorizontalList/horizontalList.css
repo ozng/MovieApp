@@ -25,3 +25,9 @@
   background-color: #d6dee1;
   border-radius: 1.5rem;
 }
+
+.horizontal-list-card-loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

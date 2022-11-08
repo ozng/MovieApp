@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <div className="header-container">
-      <a href="/" onClick={() => navigation("/")} className="header-logo">
+      <a href="/" className="header-logo">
         MYMDB
       </a>
 

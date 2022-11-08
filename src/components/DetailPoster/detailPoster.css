@@ -15,6 +15,7 @@
 
 .detail-poster-image-container {
   min-width: 20%;
+  max-width: 20%;
 }
 
 .detail-poster-genre {

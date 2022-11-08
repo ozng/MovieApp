@@ -1,4 +1,4 @@
-import { fetchMovies, searchMovie } from "./helpers/movie";
+import { searchMovie } from "./helpers/movie";
 
 export const GET_POPULAR = "GET_POPULAR";
 export const GET_UPCOMING = "GET_UPCOMING";
@@ -10,34 +10,26 @@ export const FETCH_VIDEOS = "FETCH_VIDEOS";
 export const FETCH_SEARCH = "FETCH_SEARCH";
 export const FETCH_SIMILAR = "FETCH_SIMILAR";
 
-export const getPopular = () => {
+export const getPopular = (popularMovies) => {
   return async (dispatch) => {
-    const popularMovies = await fetchMovies("/movie/popular");
-
     dispatch({ type: GET_POPULAR, payload: popularMovies });
   };
 };
 
-export const getUpcoming = () => {
+export const getUpcoming = (upcomingMovies) => {
   return async (dispatch) => {
-    const upcomingMovies = await fetchMovies("/movie/upcoming");
-
     dispatch({ type: GET_UPCOMING, payload: upcomingMovies });
   };
 };
 
-export const getTopRated = () => {
+export const getTopRated = (topRatedMovies) => {
   return async (dispatch) => {
-    const topRatedMovies = await fetchMovies("/movie/top_rated");
-
     dispatch({ type: GET_TOP_RATED, payload: topRatedMovies });
   };
 };
 
-export const getNowPlaying = () => {
+export const getNowPlaying = (nowPlayingMovies) => {
   return async (dispatch) => {
-    const nowPlayingMovies = await fetchMovies("/movie/now_playing");
-
     dispatch({ type: GET_NOW_PLAYING, payload: nowPlayingMovies });
   };
 };

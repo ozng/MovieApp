@@ -11,27 +11,39 @@ import {
 import { useEffect } from "react";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import { useNavigate } from "react-router-dom";
-import { Spin } from "antd";
-import { LoadingOutlined } from "@ant-design/icons";
+import useFetch from "../../hooks/useFetch";
 
 function Home() {
   const dispatch = useDispatch();
+
+  const { data: popularMovieData, loading: popularMoviesLoading } =
+    useFetch("/movie/popular");
+  const { data: upcomingMovieData, loading: upcomingMovieLoading } =
+    useFetch("/movie/upcoming");
+  const { data: topRatedMovieData, loading: topRatedMovieLoading } =
+    useFetch("/movie/top_rated");
+  const { data: nowPlayingMovieData, loading: nowPlayingMovieLoading } =
+    useFetch("/movie/now_playing");
 
   const popularMovies = useSelector((state) => state.movie.popular);
   const upcomingMovies = useSelector((state) => state.movie.upcoming);
   const topRatedMovies = useSelector((state) => state.movie.topRated);
   const nowPlayingMovies = useSelector((state) => state.movie.nowPlaying);
 
-  const isLoading = useSelector((state) => state.movie.isLoading);
-
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(getPopular());
-    dispatch(getNowPlaying());
-    dispatch(getTopRated());
-    dispatch(getUpcoming());
-  }, [dispatch]);
+    dispatch(getPopular(popularMovieData?.results));
+    dispatch(getNowPlaying(upcomingMovieData?.results));
+    dispatch(getTopRated(topRatedMovieData?.results));
+    dispatch(getUpcoming(nowPlayingMovieData?.results));
+  }, [
+    dispatch,
+    popularMovieData,
+    upcomingMovieData,
+    topRatedMovieData,
+    nowPlayingMovieData,
+  ]);
 
   const navigateToCategoryListHandler = (categoryName) => {
     navigate(`/category-detail/${categoryName}`);
@@ -40,38 +52,38 @@ function Home() {
   return (
     <>
       <Header />
-      {isLoading ? (
-        <div className="home-center">
-          <Spin indicator={<LoadingOutlined />} />
+      <>
+        <div className="home-slider-container">
+          <Slider
+            popularMovies={popularMovies}
+            isLoading={popularMoviesLoading}
+          />
         </div>
-      ) : (
-        <>
-          <div className="home-slider-container">
-            <Slider popularMovies={popularMovies} />
-          </div>
-          <div className="home-slider-list-container home-margin">
-            <HorizontalList
-              movieList={upcomingMovies}
-              title="Upcoming"
-              onClickTitle={() => navigateToCategoryListHandler("upcoming")}
-            />
-          </div>
-          <div className="home-slider-list-container home-margin home-m-t">
-            <HorizontalList
-              movieList={topRatedMovies}
-              title="Top Rated"
-              onClickTitle={() => navigateToCategoryListHandler("topRated")}
-            />
-          </div>
-          <div className="home-slider-list-container home-margin home-m-t">
-            <HorizontalList
-              movieList={nowPlayingMovies}
-              title="Now Playing"
-              onClickTitle={() => navigateToCategoryListHandler("nowPlaying")}
-            />
-          </div>
-        </>
-      )}
+        <div className="home-slider-list-container home-margin">
+          <HorizontalList
+            movieList={upcomingMovies}
+            isLoading={upcomingMovieLoading}
+            title="Upcoming"
+            onClickTitle={() => navigateToCategoryListHandler("upcoming")}
+          />
+        </div>
+        <div className="home-slider-list-container home-margin home-m-t">
+          <HorizontalList
+            movieList={topRatedMovies}
+            isLoading={topRatedMovieLoading}
+            title="Top Rated"
+            onClickTitle={() => navigateToCategoryListHandler("topRated")}
+          />
+        </div>
+        <div className="home-slider-list-container home-margin home-m-t">
+          <HorizontalList
+            movieList={nowPlayingMovies}
+            isLoading={nowPlayingMovieLoading}
+            title="Now Playing"
+            onClickTitle={() => navigateToCategoryListHandler("nowPlaying")}
+          />
+        </div>
+      </>
     </>
   );
 }
