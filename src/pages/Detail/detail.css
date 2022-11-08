@@ -12,3 +12,7 @@
 .detail-p-t {
   padding: 1rem 0;
 }
+
+.detail-cast-crew {
+  display: flex;
+}

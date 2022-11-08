@@ -9,6 +9,7 @@ export const FETCH_IMAGES = "FETCH_IMAGES";
 export const FETCH_VIDEOS = "FETCH_VIDEOS";
 export const FETCH_SEARCH = "FETCH_SEARCH";
 export const FETCH_SIMILAR = "FETCH_SIMILAR";
+export const FETCH_CAST = "FETCH_CAST";
 
 export const getPopular = (popularMovies) => {
   return async (dispatch) => {
@@ -62,5 +63,11 @@ export const fetchSearchedMovies = (query) => {
 export const fetchSimilarMovies = (similar) => {
   return async (dispatch) => {
     dispatch({ type: FETCH_SIMILAR, payload: similar });
+  };
+};
+
+export const fetchMovieCast = (cast) => {
+  return async (dispatch) => {
+    dispatch({ type: FETCH_CAST, payload: cast });
   };
 };

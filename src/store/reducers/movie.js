@@ -8,6 +8,7 @@ import {
   GET_UPCOMING,
   FETCH_SEARCH,
   FETCH_SIMILAR,
+  FETCH_CAST,
 } from "../actions/movie";
 
 const initialState = {
@@ -21,6 +22,7 @@ const initialState = {
   selectedMovieVideos: {},
   searchedMovies: [],
   similarMovies: [],
+  selectedMovieCast: [],
 };
 
 const movieReducer = (state = initialState, action) => {
@@ -82,6 +84,12 @@ const movieReducer = (state = initialState, action) => {
       return {
         ...state,
         similarMovies: fetchedSimilarMovies,
+      };
+    case FETCH_CAST:
+      const fetchedCastMovies = action.payload;
+      return {
+        ...state,
+        selectedMovieCast: fetchedCastMovies,
       };
     default:
       return {

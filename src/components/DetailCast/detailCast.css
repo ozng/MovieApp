@@ -1,0 +1,23 @@
+.detail-cast-container {
+  width: 50%;
+}
+
+.detail-cast-detail-container::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.detail-cast-detail-container::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 1.5rem;
+}
+
+.detail-cast-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.detail-cast-list-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
