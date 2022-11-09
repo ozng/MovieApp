@@ -1,6 +1,7 @@
 import "./detailCast.css";
 import { Avatar, List } from "antd";
 import { useNavigate } from "react-router-dom";
+import DetailTitle from "../DetailTitle/DetailTitle";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 
@@ -9,7 +10,7 @@ function DetailCast({ loading, data, title }) {
 
   return (
     <div className="detail-cast-container">
-      <h2 className="detail-cast-title">{title}</h2>
+      <DetailTitle title={title} />
       <div
         id="scrollableDiv"
         style={{

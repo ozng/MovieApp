@@ -2,12 +2,14 @@ import {
   FETCH_DETAIL,
   FETCH_PROFILE_IMAGES,
   FETCH_TAGGED_IMAGES,
+  FETCH_PERSON_MOVIE_CREDIT,
 } from "../actions/people";
 
 const initialState = {
   selectedPerson: {},
   selectedPersonProfileImages: {},
   selectedPersonTaggedImages: {},
+  selectedPersonMovieCredits: {},
 };
 
 const peopleReducer = (state = initialState, action) => {
@@ -29,6 +31,12 @@ const peopleReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedPersonTaggedImages: selectedPersonTaggedImages,
+      };
+    case FETCH_PERSON_MOVIE_CREDIT:
+      const movieCredits = action.payload;
+      return {
+        ...state,
+        selectedPersonMovieCredits: movieCredits,
       };
     default:
       return {

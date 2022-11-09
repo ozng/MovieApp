@@ -7,6 +7,10 @@
   height: 0.5rem;
 }
 
+.detail-cast-detail-container {
+  margin-top: 1rem;
+}
+
 .detail-cast-detail-container::-webkit-scrollbar-thumb {
   background-color: #d6dee1;
   border-radius: 1.5rem;

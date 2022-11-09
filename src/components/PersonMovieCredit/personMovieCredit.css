@@ -1,0 +1,87 @@
+.person-movie-credit-container {
+  margin: 1rem 0;
+
+  max-height: 50rem;
+  overflow: scroll;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.person-movie-credit-container::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.person-movie-credit-container::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 1.5rem;
+}
+
+.person-movie-credit-item-container {
+  padding: 1rem;
+
+  display: flex;
+  gap: 1rem;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+}
+
+.person-movie-credit-image {
+  width: 15rem;
+}
+
+.person-movie-credit-image-placeholder {
+  width: 15rem;
+  height: 7rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.person-movie-credit-no-image {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.3);
+
+  cursor: default;
+}
+
+.person-movie-credit-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.person-movie-credit-detail-title {
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease-out;
+}
+
+.person-movie-credit-detail-title:hover {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  cursor: pointer;
+}
+
+.person-movie-credit-detail-character-name {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.person-movie-credit-detail-rate-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--color-accent);
+}
+
+.person-movie-credit-detail-rate-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+}

@@ -1,13 +1,12 @@
 import HorizontalCard from "../HorizontalCard/HorizontalCard";
+import DetailTitle from "../DetailTitle/DetailTitle";
 import "./horizontalList.css";
 import { LoadingOutlined } from "@ant-design/icons";
 
 function HorizontalList({ movieList, title, onClickTitle, isLoading }) {
   return (
     <div className="horizontal-list-container">
-      <h2 className="horizontal-list-title" onClick={onClickTitle}>
-        {title}
-      </h2>
+      <DetailTitle title={title} onClickTitle={onClickTitle} clickable />
       <div className="horizontal-list-card-container">
         {isLoading ? (
           <div className="horizontal-list-card-loading-container">

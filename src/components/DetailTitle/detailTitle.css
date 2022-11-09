@@ -1,0 +1,22 @@
+.detail-title-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  margin-top: 2.5rem;
+
+  border-left: 6px solid var(--color-accent);
+
+  color: rgba(0, 0, 0, 0.8);
+
+  padding-left: 0.5rem;
+  cursor: default;
+}
+
+.detail-title-clickable {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.detail-title-clickable:hover {
+  color: var(--color-accent);
+}

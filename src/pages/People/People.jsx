@@ -2,6 +2,8 @@ import "./people.css";
 import { useEffect } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import PersonMovieCredit from "../../components/PersonMovieCredit/PersonMovieCredit";
+import DetailTitle from "../../components/DetailTitle/DetailTitle";
 
 import { useParams } from "react-router-dom";
 
@@ -10,6 +12,7 @@ import {
   fetchDetail,
   fetchProfileImages,
   fetchTaggedImages,
+  fetchPersonMovieCredit,
 } from "../../store/actions/people";
 
 import useFetch from "../../hooks/useFetch";
@@ -33,19 +36,22 @@ function People() {
   const { data: personTaggedImages } = useFetch(
     `/person/${personID}/tagged_images`
   );
-
-  console.log(selectedPeopleProfileImage);
+  const { data: personMovieCredit } = useFetch(
+    `/person/${personID}/movie_credits`
+  );
 
   useEffect(() => {
     dispatch(fetchDetail(personDetails));
     dispatch(fetchProfileImages(personProfileImages));
     dispatch(fetchTaggedImages(personTaggedImages));
+    dispatch(fetchPersonMovieCredit(personMovieCredit));
   }, [
     dispatch,
     personID,
     personDetails,
     personProfileImages,
     personTaggedImages,
+    personMovieCredit,
   ]);
 
   return (
@@ -53,8 +59,21 @@ function People() {
       <Header />
       <div className="people-container">
         <PeopleHeader />
-        <PeopleImages data={selectedPeopleProfileImage?.profiles} />
-        <PeopleImages data={selectedPeopleTaggedImage?.results} />
+        {selectedPeopleProfileImage?.profiles?.length > 0 && (
+          <>
+            <DetailTitle title="Profile Pictures" />
+            <PeopleImages data={selectedPeopleProfileImage?.profiles} />
+          </>
+        )}
+        {selectedPeopleTaggedImage?.results?.length > 0 && (
+          <>
+            <DetailTitle title="Tagged Pictures" />
+            <PeopleImages data={selectedPeopleTaggedImage?.results} />
+          </>
+        )}
+
+        <DetailTitle title="Movies" />
+        <PersonMovieCredit />
       </div>
       <Footer />
     </>
