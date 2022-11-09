@@ -1,9 +1,12 @@
 import "./detailCast.css";
 import { Avatar, List } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 
 function DetailCast({ loading, data, title }) {
+  const navigate = useNavigate();
+
   return (
     <div className="detail-cast-container">
       <h2 className="detail-cast-title">{title}</h2>
@@ -21,7 +24,11 @@ function DetailCast({ loading, data, title }) {
         <List
           dataSource={data}
           renderItem={(cast) => (
-            <List.Item key={cast?.id} className="detail-cast-list-item">
+            <List.Item
+              onClick={() => navigate(`/person/${cast?.id}`)}
+              key={cast?.id}
+              className="detail-cast-list-item"
+            >
               <List.Item.Meta
                 avatar={
                   <Avatar

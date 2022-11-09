@@ -1,0 +1,24 @@
+.people-header-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0 0 0;
+  align-items: baseline;
+}
+
+.people-header-list-title {
+  min-width: 25%;
+  max-width: 25%;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.people-header-list-text {
+  font-size: 1.5rem;
+}
+
+.people-header-list-label {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}

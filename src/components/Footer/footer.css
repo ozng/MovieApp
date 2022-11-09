@@ -11,6 +11,7 @@
 
 .footer-list-item {
   font-size: 1rem;
+  font-weight: 600;
   list-style: none;
   line-height: 200%;
   transition: all 0.2s ease-out;

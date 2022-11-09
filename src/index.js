@@ -8,11 +8,13 @@ import { Provider } from "react-redux";
 import { applyMiddleware, createStore, combineReducers } from "redux";
 import reduxthunk from "redux-thunk";
 import movieReducer from "./store/reducers/movie";
+import peopleReducer from "./store/reducers/people";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const rootReducer = combineReducers({
   movie: movieReducer,
+  people: peopleReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(reduxthunk));
