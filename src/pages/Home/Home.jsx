@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
   const dispatch = useDispatch();
@@ -84,6 +85,7 @@ function Home() {
           />
         </div>
       </>
+      <Footer />
     </>
   );
 }

@@ -17,6 +17,7 @@ import DetailBudget from "../../components/DetailBudget/DetailBudget";
 import DetailMedia from "../../components/DetailMedia/DetailMedia";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import DetailCast from "../../components/DetailCast/DetailCast";
+import Footer from "../../components/Footer/Footer";
 
 function Detail() {
   const dispatch = useDispatch();
@@ -83,6 +84,8 @@ function Detail() {
           </div>
         </div>
       )}
+
+      <Footer />
     </div>
   );
 }

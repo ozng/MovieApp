@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import VerticalCard from "../../components/VerticalCard/VerticalCard";
 import { useEffect, useState } from "react";
 import NoCategory from "../../components/NoCategory/NoCategory";
+import Footer from "../../components/Footer/Footer";
 
 function CategoryDetail() {
   const params = useParams();
@@ -57,6 +58,7 @@ function CategoryDetail() {
       ) : (
         <NoCategory />
       )}
+      <Footer />
     </>
   );
 }

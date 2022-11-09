@@ -1,0 +1,30 @@
+.footer-container {
+  background-color: var(--color-accent);
+  padding: 5rem 5rem;
+  color: rgb(236, 229, 229);
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-list-item {
+  font-size: 1rem;
+  list-style: none;
+  line-height: 200%;
+  transition: all 0.2s ease-out;
+}
+
+.footer-list-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.footer-list-link {
+  color: inherit;
+}
+
+.footer-list-link:hover {
+  color: inherit;
+}
