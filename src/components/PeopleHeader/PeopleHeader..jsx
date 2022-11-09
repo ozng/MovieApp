@@ -8,14 +8,13 @@ const imageURL = process.env.REACT_APP_IMG_URL;
 function PeopleHeader() {
   const selectedPerson = useSelector((state) => state.people.selectedPerson);
 
-  console.log(selectedPerson);
-
   return (
     <div className="people-header-container">
       <div className="people-header-image-container">
         <Image
           className="people-header-image"
           src={`${imageURL}/original/${selectedPerson?.profile_path}`}
+          preview={false}
         />
       </div>
       <div className="people-header-detail-container">
@@ -39,6 +38,13 @@ function PeopleHeader() {
           <p className="people-header-detail-born-place">
             {selectedPerson?.place_of_birth}
           </p>
+          {selectedPerson?.deathday && (
+            <>
+              <p className="people-header-detail-born-place">
+                Died at {moment(selectedPerson?.deathday).format("LL")}
+              </p>
+            </>
+          )}
         </div>
       </div>
     </div>

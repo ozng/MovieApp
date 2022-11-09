@@ -1,0 +1,28 @@
+.people-images-container {
+  display: flex;
+  gap: 1rem;
+  overflow: scroll;
+  padding: 1rem;
+  margin: 1rem 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.people-images-container::-webkit-scrollbar {
+  width: 0;
+  height: 0.5rem;
+}
+
+.people-images-container::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 1.5rem;
+}
+
+.people-images-image {
+  width: 10rem;
+  height: 14rem;
+
+  object-fit: cover;
+
+  border-radius: 3px;
+}
