@@ -12,6 +12,21 @@
   border-radius: 1.5rem;
 }
 
+.detail-cast-list-item {
+  transition: all 0.2s ease-out;
+  padding-left: 0.5rem;
+  border-radius: 5px;
+}
+
+.detail-cast-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.detail-cast-list-item:hover .detail-cast-list-title {
+  color: var(--color-accent);
+}
+
 .detail-cast-title {
   font-size: 1.5rem;
   font-weight: 600;
