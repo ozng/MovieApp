@@ -10,7 +10,8 @@ function Header() {
   const inputRef = useRef();
   const dispatch = useDispatch();
 
-  const onSearch = async () => {
+  const onSearch = async (e) => {
+    e.preventDefault();
     dispatch(fetchSearchedMovies(inputRef?.current?.value));
     navigation("/category-detail/searchedMovies");
   };
@@ -22,12 +23,14 @@ function Header() {
       </a>
 
       <div className="header-search-container">
-        <input
-          placeholder="Search"
-          type="text"
-          className="header-search-input"
-          ref={inputRef}
-        />
+        <form onSubmit={onSearch}>
+          <input
+            placeholder="Search"
+            type="text"
+            className="header-search-input"
+            ref={inputRef}
+          />
+        </form>
         <SearchOutlined className="header-search-icon" onClick={onSearch} />
       </div>
 

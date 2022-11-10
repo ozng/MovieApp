@@ -60,7 +60,9 @@ function CategoryDetail() {
       ) : (
         <NoCategory />
       )}
-      <Footer />
+      <div className="footer-container">
+        <Footer />
+      </div>
     </>
   );
 }

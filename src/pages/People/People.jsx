@@ -75,7 +75,9 @@ function People() {
         <DetailTitle title="Movies" />
         <PersonMovieCredit />
       </div>
-      <Footer />
+      <div className="footer-container">
+        <Footer />
+      </div>
     </>
   );
 }

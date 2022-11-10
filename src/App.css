@@ -20,3 +20,7 @@ body {
 
   --color-white-1: #f2f2f2;
 }
+
+.footer-container {
+  position: relative;
+}
