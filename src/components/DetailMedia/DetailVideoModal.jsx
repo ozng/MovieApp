@@ -64,26 +64,35 @@ function DetailVideoModal({ isModalOpen, handleOk, handleCancel, movieID }) {
                 <p className="detail-video-modal-video-title">Trailers</p>
               )}
               {trailers &&
-                trailers.map((video) => <DetailVideoCollapse video={video} />)}
+                trailers.map((video, index) => (
+                  <DetailVideoCollapse key={index} video={video} />
+                ))}
 
               {teasers?.length > 0 && (
                 <p className="detail-video-modal-video-title">Teasers</p>
               )}
               {teasers &&
-                teasers.map((video) => <DetailVideoCollapse video={video} />)}
+                teasers.map((video, index) => (
+                  <DetailVideoCollapse key={index} video={video} />
+                ))}
 
               {bts?.length > 0 && (
                 <p className="detail-video-modal-video-title">
                   Behind The Scenes
                 </p>
               )}
-              {bts && bts.map((video) => <DetailVideoCollapse video={video} />)}
+              {bts &&
+                bts.map((video, index) => (
+                  <DetailVideoCollapse key={index} video={video} />
+                ))}
 
               {featurred?.length > 0 && (
                 <p className="detail-video-modal-video-title">Featurred</p>
               )}
               {featurred &&
-                featurred.map((video) => <DetailVideoCollapse video={video} />)}
+                featurred.map((video, index) => (
+                  <DetailVideoCollapse key={index} video={video} />
+                ))}
             </div>
           )}
         </div>

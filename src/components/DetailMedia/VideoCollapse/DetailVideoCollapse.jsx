@@ -3,7 +3,7 @@ import "./detailVideoCollapse.css";
 
 function DetailVideoCollapse({ video }) {
   return (
-    <div className="detail-video-modal-trailer-container">
+    <div key={video.id} className="detail-video-modal-trailer-container">
       <Collapse>
         <Collapse.Panel header={video?.name}>
           <div className="detail-video-modal-youtube-container">

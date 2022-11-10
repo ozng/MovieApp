@@ -19,8 +19,8 @@ function Slider({ popularMovies, isLoading }) {
           </div>
         ) : (
           popularMovies?.length > 0 &&
-          popularMovies.map((movie) => (
-            <div key={movie.id} className="slider-card-container">
+          popularMovies.map((movie, index) => (
+            <div key={index} className="slider-card-container">
               <img
                 className="slider-image"
                 alt="movie cover"

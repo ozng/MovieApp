@@ -15,7 +15,6 @@ function HorizontalCard({ movie }) {
     <div
       onClick={navigateToDetailHandler}
       className="horizontal-card-container"
-      key={movie.id}
     >
       <div>
         <img

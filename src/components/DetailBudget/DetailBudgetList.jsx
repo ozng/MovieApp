@@ -6,8 +6,8 @@ const imageURL = process.env.REACT_APP_IMG_URL;
 function DetailBudgetList({ data }) {
   return (
     <>
-      {data.map((item) => (
-        <div key={item.key} className="detail-budget-list-container">
+      {data.map((item, index) => (
+        <div key={index} className="detail-budget-list-container">
           {item?.logo_path && (
             <Image
               src={`${imageURL}/w92/${item?.logo_path}`}

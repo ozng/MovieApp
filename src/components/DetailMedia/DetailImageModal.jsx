@@ -44,8 +44,9 @@ function DetailImageModal({ isModalOpen, handleOk, handleCancel, movieID }) {
             </h2>
             <div className="detail-image-modal-image-container">
               {selectedImages?.backdrops &&
-                selectedImages?.backdrops.map((image) => (
+                selectedImages?.backdrops.map((image, index) => (
                   <Image
+                    key={index}
                     className="detail-image-modal-image"
                     src={`${imageURL}/w1280/${image?.file_path}`}
                   />
@@ -58,8 +59,9 @@ function DetailImageModal({ isModalOpen, handleOk, handleCancel, movieID }) {
             </h2>
             <div className="detail-image-modal-image-container">
               {selectedImages?.posters &&
-                selectedImages?.posters.map((image) => (
+                selectedImages?.posters.map((image, index) => (
                   <Image
+                    key={index}
                     className="detail-image-modal-image"
                     src={`${imageURL}/w1280/${image?.file_path}`}
                   />

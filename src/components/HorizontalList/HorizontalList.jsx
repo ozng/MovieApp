@@ -14,7 +14,9 @@ function HorizontalList({ movieList, title, onClickTitle, isLoading }) {
           </div>
         ) : (
           movieList?.length > 0 &&
-          movieList.map((movie) => <HorizontalCard movie={movie} />)
+          movieList.map((movie, index) => (
+            <HorizontalCard key={index} movie={movie} />
+          ))
         )}
         {}
       </div>

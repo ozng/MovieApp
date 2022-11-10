@@ -19,8 +19,8 @@ function DetailPoster({ detail }) {
 
           <div className="detail-poster-genres-container">
             {detail?.genres &&
-              detail?.genres.map((genre) => (
-                <p key={genre.id} className="detail-poster-genre">
+              detail?.genres.map((genre, index) => (
+                <p key={index} className="detail-poster-genre">
                   {genre.name}
                 </p>
               ))}

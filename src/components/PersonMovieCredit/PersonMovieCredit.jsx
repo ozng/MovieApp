@@ -14,8 +14,8 @@ function PersonMovieCredit() {
 
   return (
     <div className="person-movie-credit-container">
-      {personMovieCredit?.cast?.map((item) => (
-        <div className="person-movie-credit-item-container">
+      {personMovieCredit?.cast?.map((item, index) => (
+        <div key={index} className="person-movie-credit-item-container">
           <div className="person-movie-credit-image-container">
             {item.backdrop_path ? (
               <Image

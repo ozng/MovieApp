@@ -18,16 +18,15 @@ function DetailCast({ loading, data, title }) {
           overflow: "auto",
           padding: "0 0.5rem",
           width: "100%",
-          //   border: "1px solid rgba(140, 140, 140, 0.35)",
         }}
         className="detail-cast-detail-container"
       >
         <List
           dataSource={data}
-          renderItem={(cast) => (
+          renderItem={(cast, index) => (
             <List.Item
               onClick={() => navigate(`/person/${cast?.id}`)}
-              key={cast?.id}
+              key={index}
               className="detail-cast-list-item"
             >
               <List.Item.Meta

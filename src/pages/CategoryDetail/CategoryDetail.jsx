@@ -50,8 +50,10 @@ function CategoryDetail() {
           </div>
           <div className="category-detail-margin">
             {selectedCategoryData &&
-              selectedCategoryData.map((movie) => (
-                <VerticalCard movie={movie} />
+              selectedCategoryData.map((movie, index) => (
+                <div key={index}>
+                  <VerticalCard movie={movie} />
+                </div>
               ))}
           </div>
         </>
