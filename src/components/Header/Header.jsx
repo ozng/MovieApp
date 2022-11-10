@@ -25,7 +25,7 @@ function Header() {
       <div className="header-search-container">
         <form onSubmit={onSearch}>
           <input
-            placeholder="Search"
+            placeholder="Search movies"
             type="text"
             className="header-search-input"
             ref={inputRef}

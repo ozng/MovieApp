@@ -18,6 +18,7 @@ import DetailMedia from "../../components/DetailMedia/DetailMedia";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import DetailCast from "../../components/DetailCast/DetailCast";
 import Footer from "../../components/Footer/Footer";
+import { scrollToTop } from "../../helpers/UIHandlers";
 
 function Detail() {
   const dispatch = useDispatch();
@@ -48,6 +49,7 @@ function Detail() {
     dispatch(getDetail(data));
     dispatch(fetchSimilarMovies(similarMovies?.results));
     dispatch(fetchMovieCast(movieCredits));
+    scrollToTop();
   }, [dispatch, data, similarMovies, movieCredits]);
 
   return (

@@ -18,6 +18,7 @@ import {
 import useFetch from "../../hooks/useFetch";
 import PeopleHeader from "../../components/PeopleHeader/PeopleHeader.";
 import PeopleImages from "../../components/PeopleImages/PeopleImages";
+import { scrollToTop } from "../../helpers/UIHandlers";
 
 function People() {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ function People() {
     dispatch(fetchProfileImages(personProfileImages));
     dispatch(fetchTaggedImages(personTaggedImages));
     dispatch(fetchPersonMovieCredit(personMovieCredit));
+    scrollToTop();
   }, [
     dispatch,
     personID,

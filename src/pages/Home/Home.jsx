@@ -13,6 +13,7 @@ import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Footer from "../../components/Footer/Footer";
+import { scrollToTop } from "../../helpers/UIHandlers";
 
 function Home() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ function Home() {
     dispatch(getNowPlaying(upcomingMovieData?.results));
     dispatch(getTopRated(topRatedMovieData?.results));
     dispatch(getUpcoming(nowPlayingMovieData?.results));
+    scrollToTop();
   }, [
     dispatch,
     popularMovieData,
