@@ -42,6 +42,8 @@ function Detail() {
 
   const castInfo = useSelector((state) => state.movie.selectedMovieCast);
 
+  console.log(castInfo);
+
   useEffect(() => {
     dispatch(getDetail(data));
     dispatch(fetchSimilarMovies(similarMovies?.results));

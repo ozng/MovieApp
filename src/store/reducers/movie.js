@@ -87,9 +87,15 @@ const movieReducer = (state = initialState, action) => {
       };
     case FETCH_CAST:
       const fetchedCastMovies = action.payload;
+      const movieCastAndCrewFixed = {
+        ...fetchedCastMovies,
+        crew: fetchedCastMovies?.crew?.filter(
+          (crew) => crew?.known_for_department !== "Acting"
+        ),
+      };
       return {
         ...state,
-        selectedMovieCast: fetchedCastMovies,
+        selectedMovieCast: movieCastAndCrewFixed,
       };
     default:
       return {
