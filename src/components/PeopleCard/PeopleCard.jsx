@@ -1,4 +1,4 @@
-import { Image } from "antd";
+import { Image, notification } from "antd";
 import "./peopleCard.css";
 import { useNavigate } from "react-router-dom";
 
@@ -13,6 +13,14 @@ function PeopleCard({ people }) {
 
   const onMovieCardClick = (id) => {
     navigate(`/movie/${id}`);
+  };
+
+  const onError = () => {
+    notification.error({
+      message: "Not supported",
+      description:
+        "You cannot display media types other than movies. Please try another one.",
+    });
   };
 
   return (
@@ -33,7 +41,11 @@ function PeopleCard({ people }) {
             <div
               className="people-card-known-for-item"
               key={index}
-              onClick={() => onMovieCardClick(movie?.id)}
+              onClick={
+                movie?.media_type === "tv"
+                  ? onError
+                  : () => onMovieCardClick(movie?.id)
+              }
             >
               <Image
                 src={`${imageURL}/original/${movie?.poster_path}`}
