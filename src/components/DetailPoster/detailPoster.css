@@ -37,6 +37,36 @@
   font-style: italic;
 }
 
+.detail-poster-provider-container {
+  display: flex;
+  /* gap: 2rem; */
+}
+
+.detail-poster-provider-item {
+  padding: 0 2rem;
+}
+
+.detail-poster-provider-image {
+  display: flex;
+  gap: 1rem;
+
+  border-radius: 5px;
+
+  padding: 0.5rem 1rem;
+}
+
+.detail-poster-provider-title {
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-bottom: 0.2rem;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+
+  cursor: default;
+}
+
 .detail-poster-details {
   display: flex;
   flex-direction: column;

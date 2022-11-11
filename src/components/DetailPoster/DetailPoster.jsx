@@ -1,15 +1,19 @@
 import "./detailPoster.css";
 import { Image } from "antd";
 import moment from "moment";
+import { useSelector } from "react-redux";
+import StreamCard from "../StreamCard/StreamCard";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 
 function DetailPoster({ detail }) {
+  const streams = useSelector((state) => state.movie.selectedMovieProviders);
+  console.log(streams);
   return (
     <div className="detail-poster-container">
       <div className="detail-poster-image-container">
         <Image
-          src={`${imageURL}/w500/${detail?.poster_path}`}
+          src={`${imageURL}/original/${detail?.poster_path}`}
           className="detail-poster-image"
         />
       </div>
@@ -27,6 +31,46 @@ function DetailPoster({ detail }) {
           </div>
 
           <p className="detail-poster-overview">{detail?.overview}</p>
+        </div>
+
+        <div className="detail-poster-provider-container">
+          <div className="detail-poster-provider-item">
+            <div className="detail-poster-provider-title-container">
+              {streams?.flatrate && (
+                <h3 className="detail-poster-provider-title">Watch</h3>
+              )}
+            </div>
+            <div className="detail-poster-provider-image">
+              {streams?.flatrate?.map((stream, index) => (
+                <StreamCard key={index} stream={stream} />
+              ))}
+            </div>
+          </div>
+          <div className="detail-poster-provider-item">
+            <div className="detail-poster-provider-title-container">
+              {streams?.rent && (
+                <h3 className="detail-poster-provider-title">Rent</h3>
+              )}
+            </div>
+            <div className="detail-poster-provider-image">
+              {streams?.rent?.map((stream, index) => (
+                <StreamCard key={index} stream={stream} />
+              ))}
+            </div>
+          </div>
+
+          <div className="detail-poster-provider-item">
+            <div className="detail-poster-provider-title-container">
+              {streams?.buy && (
+                <h3 className="detail-poster-provider-title">Buy</h3>
+              )}
+            </div>
+            <div className="detail-poster-provider-image">
+              {streams?.buy?.map((stream, index) => (
+                <StreamCard key={index} stream={stream} />
+              ))}
+            </div>
+          </div>
         </div>
 
         <div>

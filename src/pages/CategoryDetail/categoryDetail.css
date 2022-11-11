@@ -1,3 +1,7 @@
+.category-detail-container {
+  min-height: 100vh;
+}
+
 .category-detail-margin {
   padding: 0 5rem;
 }

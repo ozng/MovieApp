@@ -6,6 +6,7 @@ import {
   getDetail,
   fetchSimilarMovies,
   fetchMovieCast,
+  fetchMovieProviders,
 } from "../../store/actions/movie";
 import useFetch from "../../hooks/useFetch";
 import { Spin } from "antd";
@@ -19,13 +20,14 @@ import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import DetailCast from "../../components/DetailCast/DetailCast";
 import Footer from "../../components/Footer/Footer";
 import { scrollToTop } from "../../helpers/UIHandlers";
+import { getUserLocaleHandler } from "../../helpers/Methods";
 
 function Detail() {
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
-
   const params = useParams();
+
+  const userLocale = getUserLocaleHandler();
 
   const movieID = params.id;
 
@@ -37,20 +39,26 @@ function Detail() {
     `/movie/${movieID}/credits`
   );
 
+  const { data: watchProviders } = useFetch(
+    `/movie/${movieID}/watch/providers`
+  );
+
   const similar = useSelector((state) => state.movie.similarMovies);
 
   const movieDetail = useSelector((state) => state.movie.selected);
 
   const castInfo = useSelector((state) => state.movie.selectedMovieCast);
 
-  console.log(castInfo);
+  const providers = useSelector((state) => state.movie.selectedMovieProviders);
+  console.log(providers);
 
   useEffect(() => {
     dispatch(getDetail(data));
     dispatch(fetchSimilarMovies(similarMovies?.results));
     dispatch(fetchMovieCast(movieCredits));
+    dispatch(fetchMovieProviders(watchProviders?.results[userLocale]));
     scrollToTop();
-  }, [dispatch, data, similarMovies, movieCredits]);
+  }, [dispatch, data, similarMovies, movieCredits, watchProviders, userLocale]);
 
   return (
     <div>

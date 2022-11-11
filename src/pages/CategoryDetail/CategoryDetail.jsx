@@ -45,23 +45,25 @@ function CategoryDetail() {
   return (
     <>
       <Header />
-      {isCategorySelected ? (
-        <>
-          <div className="category-detail-title-container">
-            <h1 className="category-detail-title">{selectedTitle} Movies</h1>
-          </div>
-          <div className="category-detail-margin">
-            {selectedCategoryData &&
-              selectedCategoryData.map((movie, index) => (
-                <div key={index}>
-                  <VerticalCard movie={movie} />
-                </div>
-              ))}
-          </div>
-        </>
-      ) : (
-        <NoCategory />
-      )}
+      <div className="category-detail-container">
+        {isCategorySelected ? (
+          <>
+            <div className="category-detail-title-container">
+              <h1 className="category-detail-title">{selectedTitle} Movies</h1>
+            </div>
+            <div className="category-detail-margin">
+              {selectedCategoryData &&
+                selectedCategoryData.map((movie, index) => (
+                  <div key={index}>
+                    <VerticalCard movie={movie} />
+                  </div>
+                ))}
+            </div>
+          </>
+        ) : (
+          <NoCategory />
+        )}
+      </div>
       <div className="footer-container">
         <Footer />
       </div>
