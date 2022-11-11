@@ -13,22 +13,26 @@ function DetailBudget({ detail }) {
 
   const options = [
     {
-      label: "Budget",
+      label: <h4 className="detail-budget-label-title">Budget</h4>,
       key: "b",
       children: <DetailBudgetList data={budgetData} />,
     },
     {
-      label: "Languaes",
+      label: <h4 className="detail-budget-label-title">Languages</h4>,
       key: "l",
       children: <DetailBudgetList data={detail?.spoken_languages} />,
     },
     {
-      label: "Production Companies",
+      label: (
+        <h4 className="detail-budget-label-title">Production Companies</h4>
+      ),
       key: "pc",
       children: <DetailBudgetList data={detail?.production_companies} />,
     },
     {
-      label: "Production Countries",
+      label: (
+        <h4 className="detail-budget-label-title">Production Countries</h4>
+      ),
       key: "pcountry",
       children: <DetailBudgetList data={detail?.production_countries} />,
     },
