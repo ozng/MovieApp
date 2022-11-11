@@ -1,0 +1,17 @@
+.people-horizontal-list-container {
+  display: flex;
+  overflow: scroll;
+  gap: 1rem;
+
+  padding: 1rem;
+}
+
+.people-horizontal-list-container::-webkit-scrollbar {
+  width: 0;
+  height: 0.5rem;
+}
+
+.people-horizontal-list-container::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 1rem;
+}

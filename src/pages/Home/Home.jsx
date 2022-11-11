@@ -8,8 +8,10 @@ import {
   getTopRated,
   getUpcoming,
 } from "../../store/actions/movie";
+import { fetchPopularPersons } from "../../store/actions/people";
 import { useEffect } from "react";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
+import PeopleHorizontalList from "../../components/PeopleHorizontalList/PeopleHorizontalList";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Footer from "../../components/Footer/Footer";
@@ -26,6 +28,7 @@ function Home() {
     useFetch("/movie/top_rated");
   const { data: nowPlayingMovieData, loading: nowPlayingMovieLoading } =
     useFetch("/movie/now_playing");
+  const { data: popularPeople } = useFetch("/person/popular");
 
   const popularMovies = useSelector((state) => state.movie.popular);
   const upcomingMovies = useSelector((state) => state.movie.upcoming);
@@ -39,6 +42,7 @@ function Home() {
     dispatch(getNowPlaying(upcomingMovieData?.results));
     dispatch(getTopRated(topRatedMovieData?.results));
     dispatch(getUpcoming(nowPlayingMovieData?.results));
+    dispatch(fetchPopularPersons(popularPeople?.results));
     scrollToTop();
   }, [
     dispatch,
@@ -46,6 +50,7 @@ function Home() {
     upcomingMovieData,
     topRatedMovieData,
     nowPlayingMovieData,
+    popularPeople,
   ]);
 
   const navigateToCategoryListHandler = (categoryName) => {
@@ -61,6 +66,9 @@ function Home() {
             popularMovies={popularMovies}
             isLoading={popularMoviesLoading}
           />
+        </div>
+        <div className="home-slider-list-container home-margin home-m-t">
+          <PeopleHorizontalList />
         </div>
         <div className="home-slider-list-container home-margin">
           <HorizontalList
