@@ -1,11 +1,13 @@
 import "./categoryDetail.css";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Common/Header/Header";
+import Footer from "../../components/Common/Footer/Footer";
+import VerticalCard from "../../components/Cards/VerticalCard/VerticalCard";
+import NoCategory from "../../components/NoCategory/NoCategory";
+
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import VerticalCard from "../../components/VerticalCard/VerticalCard";
 import { useEffect, useState } from "react";
-import NoCategory from "../../components/NoCategory/NoCategory";
-import Footer from "../../components/Footer/Footer";
+
 import { scrollToTop } from "../../helpers/UIHandlers";
 
 function CategoryDetail() {

@@ -2,7 +2,7 @@ import "./detailPoster.css";
 import { Image } from "antd";
 import moment from "moment";
 import { useSelector } from "react-redux";
-import StreamCard from "../StreamCard/StreamCard";
+import StreamCard from "../../Cards/StreamCard/StreamCard";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 

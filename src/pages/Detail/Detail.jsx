@@ -1,5 +1,5 @@
 import "./detail.css";
-import Header from "../../components/Header/Header";
+
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -12,13 +12,14 @@ import useFetch from "../../hooks/useFetch";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 import { useEffect } from "react";
-import DetailHeader from "../../components/DetailHeader/DetailHeader";
-import DetailPoster from "../../components/DetailPoster/DetailPoster";
-import DetailBudget from "../../components/DetailBudget/DetailBudget";
-import DetailMedia from "../../components/DetailMedia/DetailMedia";
+import DetailHeader from "../../components/DetailComponents/DetailHeader/DetailHeader";
+import DetailPoster from "../../components/DetailComponents/DetailPoster/DetailPoster";
+import DetailBudget from "../../components/DetailComponents/DetailBudget/DetailBudget";
+import DetailMedia from "../../components/DetailComponents/DetailMedia/DetailMedia";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
-import DetailCast from "../../components/DetailCast/DetailCast";
-import Footer from "../../components/Footer/Footer";
+import DetailCast from "../../components/DetailComponents/DetailCast/DetailCast";
+import Header from "../../components/Common/Header/Header";
+import Footer from "../../components/Common/Footer/Footer";
 import { scrollToTop } from "../../helpers/UIHandlers";
 import { getUserLocaleHandler } from "../../helpers/Methods";
 

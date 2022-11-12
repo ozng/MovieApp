@@ -12,6 +12,8 @@ body {
 
   scroll-behavior: smooth;
 
+  color: var(--color-text-black);
+
   --color-text-black: #333;
 
   --color-accent: #e7a61a;
@@ -29,6 +31,10 @@ body {
 
 .m-x-5 {
   margin: 0 5rem;
+}
+
+.m-y-2 {
+  margin: 2rem 0;
 }
 
 .m-t-2 {

@@ -1,9 +1,9 @@
 import { Modal } from "antd";
 import "./detailVideoModal.css";
-import useFetch from "../../hooks/useFetch";
+import useFetch from "../../../hooks/useFetch";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { fetchVideos } from "../../store/actions/movie";
+import { fetchVideos } from "../../../store/actions/movie";
 import { useState } from "react";
 import DetailVideoCollapse from "./VideoCollapse/DetailVideoCollapse";
 

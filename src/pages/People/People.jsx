@@ -1,9 +1,9 @@
 import "./people.css";
 import { useEffect } from "react";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-import PersonMovieCredit from "../../components/PersonMovieCredit/PersonMovieCredit";
-import DetailTitle from "../../components/DetailTitle/DetailTitle";
+import Header from "../../components/Common/Header/Header";
+import Footer from "../../components/Common/Footer/Footer";
+import PersonMovieCredit from "../../components/PeopleComponents/PersonMovieCredit/PersonMovieCredit";
+import DetailTitle from "../../components/DetailComponents/DetailTitle/DetailTitle";
 
 import { useParams } from "react-router-dom";
 
@@ -16,8 +16,8 @@ import {
 } from "../../store/actions/people";
 
 import useFetch from "../../hooks/useFetch";
-import PeopleHeader from "../../components/PeopleHeader/PeopleHeader.";
-import PeopleImages from "../../components/PeopleImages/PeopleImages";
+import PeopleHeader from "../../components/PeopleComponents/PeopleHeader/PeopleHeader.";
+import PeopleImages from "../../components/PeopleComponents/PeopleImages/PeopleImages";
 import { scrollToTop } from "../../helpers/UIHandlers";
 
 function People() {

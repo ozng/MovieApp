@@ -1,9 +1,9 @@
 import "./detailImageModal.css";
 import { Modal, Image } from "antd";
-import useFetch from "../../hooks/useFetch";
+import useFetch from "../../../hooks/useFetch";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchImages } from "../../store/actions/movie";
+import { fetchImages } from "../../../store/actions/movie";
 
 const imageURL = process.env.REACT_APP_IMG_URL;
 

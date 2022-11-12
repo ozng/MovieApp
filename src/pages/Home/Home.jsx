@@ -1,5 +1,6 @@
 import "./home.css";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Common/Header/Header";
+import Footer from "../../components/Common/Footer/Footer";
 import Slider from "../../components/Slider/Slider";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -11,10 +12,9 @@ import {
 import { fetchPopularPersons } from "../../store/actions/people";
 import { useEffect } from "react";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
-import PeopleHorizontalList from "../../components/PeopleHorizontalList/PeopleHorizontalList";
+import PeopleHorizontalList from "../../components/PeopleComponents/PeopleHorizontalList/PeopleHorizontalList";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import Footer from "../../components/Footer/Footer";
 import { scrollToTop } from "../../helpers/UIHandlers";
 
 function Home() {
@@ -67,10 +67,10 @@ function Home() {
             isLoading={popularMoviesLoading}
           />
         </div>
-        <div className="m-t-2">
+        <div className="m-y-2">
           <PeopleHorizontalList />
         </div>
-        <div className="m-t-2">
+        <div className="m-y-2">
           <HorizontalList
             movieList={upcomingMovies}
             isLoading={upcomingMovieLoading}
@@ -78,7 +78,7 @@ function Home() {
             onClickTitle={() => navigateToCategoryListHandler("upcoming")}
           />
         </div>
-        <div className="m-t-2">
+        <div className="m-y-2">
           <HorizontalList
             movieList={topRatedMovies}
             isLoading={topRatedMovieLoading}
@@ -86,7 +86,7 @@ function Home() {
             onClickTitle={() => navigateToCategoryListHandler("topRated")}
           />
         </div>
-        <div className="m-t-2">
+        <div className="m-y-2">
           <HorizontalList
             movieList={nowPlayingMovies}
             isLoading={nowPlayingMovieLoading}

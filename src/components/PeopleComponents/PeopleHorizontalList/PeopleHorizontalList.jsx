@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import PeopleCard from "../PeopleCard/PeopleCard";
-import DetailTitle from "../DetailTitle/DetailTitle";
+import PeopleCard from "../../Cards/PeopleCard/PeopleCard";
+import DetailTitle from "../../DetailComponents/DetailTitle/DetailTitle";
 import "./peopleHorizontalList.css";
 
 function PeopleHorizontalList() {

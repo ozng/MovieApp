@@ -1,5 +1,5 @@
-import HorizontalCard from "../HorizontalCard/HorizontalCard";
-import DetailTitle from "../DetailTitle/DetailTitle";
+import HorizontalCard from "../Cards/HorizontalCard/HorizontalCard";
+import DetailTitle from "../DetailComponents/DetailTitle/DetailTitle";
 import "./horizontalList.css";
 import { LoadingOutlined } from "@ant-design/icons";
 

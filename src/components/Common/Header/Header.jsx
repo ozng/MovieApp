@@ -3,7 +3,7 @@ import "./header.css";
 import { SearchOutlined } from "@ant-design/icons";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { fetchSearchedMovies } from "../../store/actions/movie";
+import { fetchSearchedMovies } from "../../../store/actions/movie";
 
 function Header() {
   const navigation = useNavigate();
