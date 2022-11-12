@@ -4,8 +4,7 @@ import useFetch from "../../../hooks/useFetch";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImages } from "../../../store/actions/movie";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function DetailImageModal({ isModalOpen, handleOk, handleCancel, movieID }) {
   const { data, loading } = useFetch(`/movie/${movieID}/images`);

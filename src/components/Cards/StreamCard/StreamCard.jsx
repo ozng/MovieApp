@@ -1,7 +1,6 @@
 import { Image, Popover } from "antd";
 import "./streamCard.css";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function StreamCard({ stream }) {
   return (

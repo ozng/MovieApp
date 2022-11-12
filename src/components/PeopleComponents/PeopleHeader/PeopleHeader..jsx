@@ -2,8 +2,7 @@ import "./peopleHeader.css";
 import { Image } from "antd";
 import { useSelector } from "react-redux";
 import moment from "moment";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function PeopleHeader() {
   const selectedPerson = useSelector((state) => state.people.selectedPerson);

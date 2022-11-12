@@ -2,8 +2,7 @@ import "./personMovieCredit.css";
 import { useSelector } from "react-redux";
 import { Image, Rate } from "antd";
 import { useNavigate } from "react-router-dom";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function PersonMovieCredit() {
   const navigate = useNavigate();

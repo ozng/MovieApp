@@ -1,8 +1,7 @@
 import { Image, notification } from "antd";
 import "./peopleCard.css";
 import { useNavigate } from "react-router-dom";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function PeopleCard({ people }) {
   const navigate = useNavigate();

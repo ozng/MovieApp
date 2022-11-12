@@ -1,8 +1,7 @@
 import "./horizontalCard.css";
 import { Rate } from "antd";
 import { useNavigate } from "react-router-dom";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function HorizontalCard({ movie }) {
   const navigate = useNavigate();

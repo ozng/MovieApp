@@ -2,8 +2,7 @@ import "./detailCast.css";
 import { Avatar, List } from "antd";
 import { useNavigate } from "react-router-dom";
 import DetailTitle from "../DetailTitle/DetailTitle";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function DetailCast({ loading, data, title }) {
   const navigate = useNavigate();

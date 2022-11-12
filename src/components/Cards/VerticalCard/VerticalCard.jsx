@@ -2,8 +2,7 @@ import "./verticalCard.css";
 import { Image, Rate } from "antd";
 import moment from "moment/moment";
 import { useNavigate } from "react-router-dom";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function VerticalCard({ movie }) {
   const navigate = useNavigate();

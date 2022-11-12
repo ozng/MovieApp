@@ -3,8 +3,7 @@ import { Image } from "antd";
 import moment from "moment";
 import { useSelector } from "react-redux";
 import StreamCard from "../../Cards/StreamCard/StreamCard";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../../constants/Api";
 
 function DetailPoster({ detail }) {
   const streams = useSelector((state) => state.movie.selectedMovieProviders);

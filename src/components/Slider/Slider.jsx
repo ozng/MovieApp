@@ -2,8 +2,7 @@ import "./slider.css";
 import { Carousel } from "antd";
 import { useNavigate } from "react-router-dom";
 import { LoadingOutlined } from "@ant-design/icons";
-
-const imageURL = process.env.REACT_APP_IMG_URL;
+import { imageURL } from "../../constants/Api";
 
 function Slider({ popularMovies, isLoading }) {
   const navigate = useNavigate();
