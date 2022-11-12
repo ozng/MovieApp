@@ -1,14 +1,16 @@
 import "./categoryDetail.css";
+
 import Header from "../../components/Common/Header/Header";
 import Footer from "../../components/Common/Footer/Footer";
 import VerticalCard from "../../components/Cards/VerticalCard/VerticalCard";
 import NoCategory from "../../components/NoCategory/NoCategory";
 
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 
 import { scrollToTop } from "../../helpers/UIHandlers";
+import { setCategoryTitleHandler } from "../../helpers/Methods";
 
 function CategoryDetail() {
   const params = useParams();
@@ -23,24 +25,10 @@ function CategoryDetail() {
   const [isCategorySelected, setIsCategorySelected] = useState(true);
 
   useEffect(() => {
-    if (selectedCategory === "upcoming") {
-      setSelectedTitle("Upcoming");
-      setIsCategorySelected(true);
-    } else if (selectedCategory === "topRated") {
-      setSelectedTitle("Top Rated");
-      setIsCategorySelected(true);
-    } else if (selectedCategory === "nowPlaying") {
-      setSelectedTitle("Now Playing");
-      setIsCategorySelected(true);
-    } else if (selectedCategory === "searchedMovies") {
-      setSelectedTitle("Searched");
-      setIsCategorySelected(true);
-    } else if (selectedCategory === "similarMovies") {
-      setSelectedTitle("Similar");
-      setIsCategorySelected(true);
-    } else {
-      setIsCategorySelected(false);
-    }
+    const { categoryTitle, categoryIsSet } =
+      setCategoryTitleHandler(selectedCategory);
+    setSelectedTitle(categoryTitle);
+    setIsCategorySelected(categoryIsSet);
     scrollToTop();
   }, [selectedCategory]);
 

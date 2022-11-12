@@ -1,10 +1,5 @@
 import "./people.css";
 import { useEffect } from "react";
-import Header from "../../components/Common/Header/Header";
-import Footer from "../../components/Common/Footer/Footer";
-import PersonMovieCredit from "../../components/PeopleComponents/PersonMovieCredit/PersonMovieCredit";
-import DetailTitle from "../../components/DetailComponents/DetailTitle/DetailTitle";
-
 import { useParams } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -14,10 +9,15 @@ import {
   fetchTaggedImages,
   fetchPersonMovieCredit,
 } from "../../store/actions/people";
-
 import useFetch from "../../hooks/useFetch";
+
 import PeopleHeader from "../../components/PeopleComponents/PeopleHeader/PeopleHeader.";
 import PeopleImages from "../../components/PeopleComponents/PeopleImages/PeopleImages";
+import Header from "../../components/Common/Header/Header";
+import Footer from "../../components/Common/Footer/Footer";
+import PersonMovieCredit from "../../components/PeopleComponents/PersonMovieCredit/PersonMovieCredit";
+import DetailTitle from "../../components/DetailComponents/DetailTitle/DetailTitle";
+
 import { scrollToTop } from "../../helpers/UIHandlers";
 
 function People() {

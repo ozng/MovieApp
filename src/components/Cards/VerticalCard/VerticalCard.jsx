@@ -12,7 +12,7 @@ function VerticalCard({ movie }) {
       <div className="vertical-card-image-container">
         <Image
           width={200}
-          src={`${imageURL}/w500/${movie?.poster_path}`}
+          src={`${imageURL}/original/${movie?.poster_path}`}
           className="vertical-card-image"
         />
       </div>

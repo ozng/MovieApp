@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import "./home.css";
+import { useNavigate } from "react-router-dom";
+
 import Header from "../../components/Common/Header/Header";
 import Footer from "../../components/Common/Footer/Footer";
 import Slider from "../../components/Slider/Slider";
+
 import { useDispatch, useSelector } from "react-redux";
 import {
   getPopular,
@@ -10,11 +14,10 @@ import {
   getUpcoming,
 } from "../../store/actions/movie";
 import { fetchPopularPersons } from "../../store/actions/people";
-import { useEffect } from "react";
+import useFetch from "../../hooks/useFetch";
+
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import PeopleHorizontalList from "../../components/PeopleComponents/PeopleHorizontalList/PeopleHorizontalList";
-import { useNavigate } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
 import { scrollToTop } from "../../helpers/UIHandlers";
 
 function Home() {

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./detail.css";
 
 import { useNavigate, useParams } from "react-router-dom";
@@ -9,9 +10,10 @@ import {
   fetchMovieProviders,
 } from "../../store/actions/movie";
 import useFetch from "../../hooks/useFetch";
+
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import { useEffect } from "react";
+
 import DetailHeader from "../../components/DetailComponents/DetailHeader/DetailHeader";
 import DetailPoster from "../../components/DetailComponents/DetailPoster/DetailPoster";
 import DetailBudget from "../../components/DetailComponents/DetailBudget/DetailBudget";
@@ -20,6 +22,7 @@ import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import DetailCast from "../../components/DetailComponents/DetailCast/DetailCast";
 import Header from "../../components/Common/Header/Header";
 import Footer from "../../components/Common/Footer/Footer";
+
 import { scrollToTop } from "../../helpers/UIHandlers";
 import { getUserLocaleHandler } from "../../helpers/Methods";
 
@@ -49,9 +52,6 @@ function Detail() {
   const movieDetail = useSelector((state) => state.movie.selected);
 
   const castInfo = useSelector((state) => state.movie.selectedMovieCast);
-
-  const providers = useSelector((state) => state.movie.selectedMovieProviders);
-  console.log(providers);
 
   useEffect(() => {
     dispatch(getDetail(data));
