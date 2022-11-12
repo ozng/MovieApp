@@ -64,16 +64,16 @@ function Detail() {
     <div>
       <Header />
       {loading ? (
-        <div className="detail-center">
+        <div className="loading-centered">
           <Spin indicator={<LoadingOutlined />} />
         </div>
       ) : (
-        <div className="detail-container">
+        <div className="m-x-5">
           <DetailHeader detail={movieDetail} />
           <DetailPoster detail={movieDetail} />
           <DetailBudget detail={movieDetail} />
           <DetailMedia movieID={movieID} />
-          <div className="detail-p-t detail-cast-crew">
+          <div className="p-t-1 detail-cast-crew">
             <DetailCast
               title="Cast"
               loading={movieCreditsLoading}
@@ -85,7 +85,7 @@ function Detail() {
               data={castInfo?.crew}
             />
           </div>
-          <div className="detail-p-t">
+          <div className="p-t-1">
             {similar?.length > 0 && (
               <HorizontalList
                 movieList={similar}

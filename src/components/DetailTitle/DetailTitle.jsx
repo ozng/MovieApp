@@ -1,6 +1,6 @@
 import "./detailTitle.css";
 
-function DetailTitle({ title, onClickTitle, clickable }) {
+function DetailTitle({ title, onClickTitle, clickable, fontSize }) {
   return (
     <div className="detail-title-container">
       <h2
@@ -9,6 +9,9 @@ function DetailTitle({ title, onClickTitle, clickable }) {
             ? "detail-title-clickable detail-title-title"
             : "detail-title-title"
         }
+        style={{
+          fontSize,
+        }}
         onClick={onClickTitle}
       >
         {title}

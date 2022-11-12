@@ -60,17 +60,17 @@ function Home() {
   return (
     <>
       <Header />
-      <>
-        <div className="home-slider-container">
+      <div className="m-x-5">
+        <div>
           <Slider
             popularMovies={popularMovies}
             isLoading={popularMoviesLoading}
           />
         </div>
-        <div className="home-slider-list-container home-margin home-m-t">
+        <div className="m-t-2">
           <PeopleHorizontalList />
         </div>
-        <div className="home-slider-list-container home-margin">
+        <div className="m-t-2">
           <HorizontalList
             movieList={upcomingMovies}
             isLoading={upcomingMovieLoading}
@@ -78,7 +78,7 @@ function Home() {
             onClickTitle={() => navigateToCategoryListHandler("upcoming")}
           />
         </div>
-        <div className="home-slider-list-container home-margin home-m-t">
+        <div className="m-t-2">
           <HorizontalList
             movieList={topRatedMovies}
             isLoading={topRatedMovieLoading}
@@ -86,7 +86,7 @@ function Home() {
             onClickTitle={() => navigateToCategoryListHandler("topRated")}
           />
         </div>
-        <div className="home-slider-list-container home-margin home-m-t">
+        <div className="m-t-2">
           <HorizontalList
             movieList={nowPlayingMovies}
             isLoading={nowPlayingMovieLoading}
@@ -94,7 +94,7 @@ function Home() {
             onClickTitle={() => navigateToCategoryListHandler("nowPlaying")}
           />
         </div>
-      </>
+      </div>
       <div className="footer-container">
         <Footer />
       </div>

@@ -40,7 +40,7 @@ function Header() {
           alt="user-avatar"
           src="https://images.pexels.com/photos/1484794/pexels-photo-1484794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
-        <p className="header-user-name">OznG</p>
+        <p className="header-user-name">username</p>
       </div>
     </div>
   );

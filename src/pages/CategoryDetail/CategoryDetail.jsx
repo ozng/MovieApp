@@ -45,13 +45,13 @@ function CategoryDetail() {
   return (
     <>
       <Header />
-      <div className="category-detail-container">
+      <div className="p-container m-x-5">
         {isCategorySelected ? (
           <>
-            <div className="category-detail-title-container">
+            <div>
               <h1 className="category-detail-title">{selectedTitle} Movies</h1>
             </div>
-            <div className="category-detail-margin">
+            <div>
               {selectedCategoryData &&
                 selectedCategoryData.map((movie, index) => (
                   <div key={index}>

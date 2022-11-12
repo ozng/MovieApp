@@ -59,7 +59,7 @@ function People() {
   return (
     <>
       <Header />
-      <div className="people-container">
+      <div className="p-container m-x-5">
         <PeopleHeader />
         {selectedPeopleProfileImage?.profiles?.length > 0 && (
           <>

@@ -26,3 +26,26 @@ body {
 .footer-container {
   position: relative;
 }
+
+.m-x-5 {
+  margin: 0 5rem;
+}
+
+.m-t-2 {
+  margin-top: 2rem;
+}
+
+.p-t-1 {
+  padding: 1rem;
+}
+
+.p-container {
+  min-height: 100vh;
+}
+
+.loading-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

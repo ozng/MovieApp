@@ -1,18 +1,3 @@
-.detail-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.detail-container {
-  padding: 0 5rem;
-}
-
-.detail-p-t {
-  padding: 1rem 0;
-}
-
 .detail-cast-crew {
   display: flex;
 }
