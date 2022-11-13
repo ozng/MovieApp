@@ -23,6 +23,8 @@ body {
   --color-grey-3: #646464;
 
   --color-white-1: #f2f2f2;
+
+  --shadow-1: 0px 0px 7px -4px rgba(0, 0, 0, 0.69);
 }
 
 .footer-container {
@@ -47,6 +49,8 @@ body {
 
 .p-container {
   min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .loading-centered {

@@ -63,7 +63,7 @@ function Home() {
   return (
     <>
       <Header />
-      <div className="m-x-5">
+      <div className="m-x-5 p-container">
         <div>
           <Slider
             popularMovies={popularMovies}

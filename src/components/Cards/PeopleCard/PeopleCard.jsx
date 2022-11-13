@@ -24,14 +24,13 @@ function PeopleCard({ people }) {
 
   return (
     <div className="people-card-container">
-      <div className="people-card-image-container">
+      <div className="people-card-image-container" onClick={onTitleClick}>
         <Image
           className="people-card-image"
           src={`${imageURL}/original/${people?.profile_path}`}
+          preview={false}
         />
-        <h2 className="people-card-title" onClick={onTitleClick}>
-          {people?.name}
-        </h2>
+        <h2 className="people-card-title">{people?.name}</h2>
       </div>
       {people?.known_for?.length > 0 && (
         <div className="people-card-movie-list">

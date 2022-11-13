@@ -69,7 +69,7 @@ function Detail() {
           <Spin indicator={<LoadingOutlined />} />
         </div>
       ) : (
-        <div className="m-x-5">
+        <div className="m-x-5 p-container">
           <DetailHeader detail={movieDetail} />
           <DetailPoster detail={movieDetail} />
           <DetailBudget detail={movieDetail} />

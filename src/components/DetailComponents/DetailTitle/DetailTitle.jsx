@@ -1,4 +1,5 @@
 import "./detailTitle.css";
+import { RightOutlined } from "@ant-design/icons";
 
 function DetailTitle({ title, onClickTitle, clickable, fontSize }) {
   return (
@@ -16,6 +17,7 @@ function DetailTitle({ title, onClickTitle, clickable, fontSize }) {
       >
         {title}
       </h2>
+      {clickable && <RightOutlined className="detail-title-icon" />}
     </div>
   );
 }

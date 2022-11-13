@@ -2,7 +2,6 @@
   display: flex;
   gap: 2rem;
   overflow: scroll;
-  /* padding: 0.2rem 0.5rem 1.5rem 1rem; */
   padding: 1rem;
 }
 
