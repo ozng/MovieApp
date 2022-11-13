@@ -47,7 +47,7 @@ function DetailImageModal({ isModalOpen, handleOk, handleCancel, movieID }) {
                   <Image
                     key={index}
                     className="detail-image-modal-image"
-                    src={`${imageURL}/w1280/${image?.file_path}`}
+                    src={`${imageURL}/original/${image?.file_path}`}
                   />
                 ))}
             </div>
