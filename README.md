@@ -1,5 +1,7 @@
 # Movie App 
 
+This application was created using [TMDB](https://www.themoviedb.org/) and is intended to be used in my portfolio.
+
 ## Technologies
 
 - [React](https://reactjs.org/docs/getting-started.html)
