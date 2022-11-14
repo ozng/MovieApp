@@ -29,7 +29,7 @@ Get movie details including videos, pictures and similar movies.
 
 Get people details including profile and tagged pictures, movies list.
 
-## Next featured
+## Next features
 
 Mobile responsive design.
 
