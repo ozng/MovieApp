@@ -1,6 +1,10 @@
 # Movie App 
 
+This application was created using [TMDB](https://www.themoviedb.org/) and is intended to be used in my portfolio.
+
 ## Technologies
+
+**Node v16.16.0**
 
 - [React](https://reactjs.org/docs/getting-started.html)
 - [Redux](https://redux.js.org/introduction/getting-started)
