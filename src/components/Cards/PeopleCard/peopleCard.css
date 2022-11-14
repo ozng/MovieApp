@@ -13,6 +13,18 @@
   width: 50%;
 }
 
+@media screen and (max-width: 375px) {
+  .people-card-image-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .people-card-image-container {
+    width: 100%;
+  }
+}
+
 .people-card-image-container:hover {
   cursor: pointer;
 }
@@ -30,6 +42,18 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 375px) {
+  .people-card-title {
+    color: var(--color-text-black);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .people-card-title {
+    color: var(--color-text-black);
+  }
+}
+
 .people-card-title:hover {
   border-bottom: 2px solid var(--color-accent);
 }
@@ -40,6 +64,18 @@
   gap: 1rem;
 
   padding-left: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .people-card-movie-list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .people-card-movie-list {
+    display: none;
+  }
 }
 
 .people-card-known-for-item {

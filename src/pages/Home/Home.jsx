@@ -19,6 +19,7 @@ import useFetch from "../../hooks/useFetch";
 import HorizontalList from "../../components/HorizontalList/HorizontalList";
 import PeopleHorizontalList from "../../components/PeopleComponents/PeopleHorizontalList/PeopleHorizontalList";
 import { scrollToTop } from "../../helpers/UIHandlers";
+import SearchInput from "../../components/SearchInput/SearchInput";
 
 function Home() {
   const dispatch = useDispatch();
@@ -64,12 +65,17 @@ function Home() {
     <>
       <Header />
       <div className="m-x-5 p-container">
-        <div>
+        <div className="home-slider-container">
           <Slider
             popularMovies={popularMovies}
             isLoading={popularMoviesLoading}
           />
         </div>
+
+        <div className="home-search-container">
+          <SearchInput />
+        </div>
+
         <div className="m-y-2">
           <PeopleHorizontalList />
         </div>

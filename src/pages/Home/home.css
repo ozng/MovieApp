@@ -1,1 +1,23 @@
+@media screen and (max-width: 375px) {
+  .home-slider-container {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 800px) {
+  .home-slider-container {
+    display: none;
+  }
+}
+
+.home-search-container {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .home-search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
