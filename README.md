@@ -4,6 +4,8 @@ This application was created using [TMDB](https://www.themoviedb.org/) and is in
 
 ## Technologies
 
+**Node v16.16.0**
+
 - [React](https://reactjs.org/docs/getting-started.html)
 - [Redux](https://redux.js.org/introduction/getting-started)
 - [Redux Thunk](https://redux.js.org/usage/writing-logic-thunks) also check [Git-hub](https://github.com/reduxjs/redux-thunk)
