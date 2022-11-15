@@ -64,6 +64,8 @@ Open your terminal and go to root of the project;
 
 ![Rootfile](https://user-images.githubusercontent.com/93818025/201635629-f28b33d8-7a61-428f-a5fc-16143ca9602a.png)
 
+*To run the command below, you need to install [Node](https://nodejs.org/en/).*
+
 Run `npm install` and wait for installation to complete.
 
 Run `npm start`
