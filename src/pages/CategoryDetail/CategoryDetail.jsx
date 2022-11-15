@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 
 import { scrollToTop } from "../../helpers/UIHandlers";
 import { setCategoryTitleHandler } from "../../helpers/Methods";
+import SearchInput from "../../components/SearchInput/SearchInput";
 
 function CategoryDetail() {
   const params = useParams();
@@ -38,6 +39,9 @@ function CategoryDetail() {
       <div className="p-container m-x-5">
         {isCategorySelected ? (
           <>
+            <div className="category-detail-search-container">
+              <SearchInput />
+            </div>
             <div>
               <h1 className="category-detail-title">{selectedTitle} Movies</h1>
             </div>
