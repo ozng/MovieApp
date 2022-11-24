@@ -62,7 +62,7 @@ function Detail() {
   }, [dispatch, data, similarMovies, movieCredits, watchProviders, userLocale]);
 
   return (
-    <div>
+    <>
       <Header />
       {loading ? (
         <div className="loading-centered">
@@ -100,7 +100,7 @@ function Detail() {
       <div className="footer-container">
         <Footer />
       </div>
-    </div>
+    </>
   );
 }
 

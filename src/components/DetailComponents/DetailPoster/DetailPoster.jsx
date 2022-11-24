@@ -7,7 +7,6 @@ import { imageURL } from "../../../constants/Api";
 
 function DetailPoster({ detail }) {
   const streams = useSelector((state) => state.movie.selectedMovieProviders);
-  console.log(streams);
   return (
     <div className="detail-poster-container">
       <div className="detail-poster-image-container">

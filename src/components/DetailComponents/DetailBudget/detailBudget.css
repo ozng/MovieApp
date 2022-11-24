@@ -10,3 +10,9 @@
 .ant-tabs-ink-bar {
   border-bottom: 2px solid var(--color-accent);
 }
+
+@media screen and (max-width: 800px) {
+  .detail-budget-label-title {
+    font-size: 0.8rem;
+  }
+}
