@@ -9,7 +9,6 @@
   min-width: 25%;
 
   display: flex;
-  align-items: center;
 }
 
 .people-header-image {
@@ -44,4 +43,41 @@
 
 .people-header-detail-born-container {
   color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 800px) {
+  .people-header-detail-name {
+    font-size: 1.2rem;
+  }
+
+  .people-header-detail-job {
+    font-size: 0.7rem;
+  }
+
+  .people-header-detail-bio {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .people-header-container {
+    display: inline-block;
+  }
+
+  .people-header-detail-container {
+    padding: 1rem;
+  }
+
+  .people-header-image-container {
+    align-items: center;
+    justify-content: center;
+
+    min-width: none;
+    max-width: none;
+    background-color: var(--color-accent);
+  }
+
+  .people-header-image {
+    height: 15rem;
+  }
 }
