@@ -49,6 +49,8 @@ function Detail() {
 
   const similar = useSelector((state) => state.movie.similarMovies);
 
+  console.log(similar);
+
   const movieDetail = useSelector((state) => state.movie.selected);
 
   const castInfo = useSelector((state) => state.movie.selectedMovieCast);

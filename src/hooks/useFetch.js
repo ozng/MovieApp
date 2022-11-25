@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const api_key = process.env.REACT_APP_API_KEY;
 const api_url = process.env.REACT_APP_API_URL;
@@ -9,11 +9,7 @@ const useFetch = (endpoint) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    reFetch();
-  }, [endpoint]);
-
-  const reFetch = async () => {
+  const reFetch = useCallback(async () => {
     setLoading(true);
     try {
       const response = await axios.get(`${api_url}${endpoint}`, {
@@ -27,7 +23,11 @@ const useFetch = (endpoint) => {
       setError(err);
     }
     setLoading(false);
-  };
+  }, [endpoint]);
+
+  useEffect(() => {
+    reFetch();
+  }, [endpoint, reFetch]);
 
   return { data, loading, error, reFetch };
 };
