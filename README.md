@@ -17,7 +17,7 @@ This application was created using [TMDB](https://www.themoviedb.org/) and is in
 
 ## Link
 
-[Movie APP - Netlify](https://wonderful-vacherin-79f50f.netlify.app/)
+[Movie APP - Netlify](https://amazing-blini-607967.netlify.app/)
 
 ![Movie-App](https://user-images.githubusercontent.com/93818025/201641233-27b051ff-f8e8-42c0-a3d6-f42a963cb8c9.png)
 
@@ -34,8 +34,6 @@ Get movie details including videos, pictures and similar movies.
 Get people details including profile and tagged pictures, movies list.
 
 ## Next features
-
-Mobile responsive design.
 
 Login-Sign in.
 
